@@ -1,0 +1,45 @@
+.category-heading {
+    color: #312c2c;
+    width: 90%;
+}
+.category_cards {
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.category_cards > div {
+    background: #fff;
+    color: #000;
+    width: 23%;
+    height: auto;
+    margin-bottom: 9px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 6px;
+}
+.category_cards > div:hover {
+    background: #fb7c6d;
+    cursor: pointer;
+}
+.category_cards > div:hover button.category-btn {
+    background: #fff!important;
+    color: #000;
+}
+.category_cards > div > div > div {
+    align-items: center;
+}
+.category_cards > div > div > div > img {
+    width: 55px;
+    border-radius: 50%; 
+}
+.category_cards > div > div > div > pre {
+    color: #fff;
+}
+.category_cards > div > h5 {
+    width: 100%;
+}
+.category_cards > div > button {
+    background: #fb7c6d;
+    color: #fff;
+}
