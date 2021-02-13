@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dented</title>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/styles/index.css">    
 </head>
 <body>
@@ -64,31 +64,194 @@
     </div>
   </div>
 
-  <div class="container bg-white mt-5 mb-5 p-3 text-info">
-    <h2>Hiring? Candidate are looking for you.</h2>
+  <div class="container bg-white mt-5 mb-5 p-3 w-75">
+    <h2 class="job-find-detail p-3">Hiring? Candidate are looking for you.</h2>
     <div class="row">
-      <div class="col-3 text-center">
-        <h3>567</h3>
-        <h4>Average job applicate</h4>
+      <div class="col-lg-3 col-md-4 col-sm-12 text-center text-success">
+        <h3 class="text-danger">567+</h3>
+        <h6 class="text-dark">Average job applicate</h6>
       </div>
-      <div class="col-3 text-center">
-        <h3>567</h3>
-        <h4>Average Days to Hire</h4>
+      <div class="col-lg-3 col-md-4 col-sm-12 text-center text-success">
+        <h3 class="text-danger">817</h3>
+        <h6 class="text-dark">Average Days to Hire</h6>
       </div>
-      <div class="col-3 text-center">
-        <h3>567</h3>
-        <h4>Newsletter Subscribers</h4>
+      <div class="col-lg-3 col-md-4 col-sm-12 text-center text-success">
+        <h3 class="text-danger">1767</h3>
+        <h6 class="text-dark">Newsletter Subscribers</h6>
       </div>
-      <div class="col-3 text-center">
+      <div class="col-lg-3 col-md-4 col-sm-12 text-center">
         <button class="btn btn-lg c-my-btn">Post a job</button>
       </div>
-
     </div>
   </div>
 
-  <script src="./bootstrap/js/jquery.min.js"></script>
-  <script src="./bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <div class="container-fluid">
+    <div class="container d-flex justify-content-between text-dark category-heading pt-5">
+      <div>
+        <h1>Remote Jobs</h1>
+        <h1>By Category</h1>
+      </div>
+      <div class="pt-5">
+        <p class="p-5">Explore Category</p>
+      </div>
+    </div>
+  <div class="category_cards">
+    <div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="assets/images/myicon.png" class="img-circle"> 
+        </div>  
+        <div>
+          <pre>
+          ..........
+          ..........
+          ..........
+          ..........
+          </pre>
+        </div>   
+      </div>     
+      <h5>Costumer Support</h5>
+      <p>14 job vacancy</p>
+      <button class="btn btn-sm category-btn">Know More</button>
+    </div>
+    <div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="assets/images/myicon.png" class="img-circle"> 
+        </div>  
+        <div>
+          <pre>
+          ..........
+          ..........
+          ..........
+          ..........
+          </pre>
+        </div>   
+      </div>     
+      <h5>Costumer Support</h5>
+      <p>14 job vacancy</p>
+      <button class="btn btn-sm category-btn">Know More</button>
+    </div>
+    <div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="assets/images/myicon.png" class="img-circle"> 
+        </div>  
+        <div>
+         <pre>
+          ..........
+          ..........
+          ..........
+          ..........
+          </pre>
+        </div>   
+      </div>     
+      <h5>Costumer Support</h5>
+      <p>14 job vacancy</p>
+      <button class="btn btn-sm  category-btn">Know More</button>
+    </div>
+    <div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="assets/images/myicon.png" class="img-circle"> 
+        </div>  
+        <div>
+          <pre>
+          ..........
+          ..........
+          ..........
+          ..........
+          </pre>
+        </div>   
+      </div>     
+      <h5>Costumer Support</h5>
+      <p>14 job vacancy</p>
+      <button class="btn btn-sm category-btn">Know More</button>
+    </div>
+  </div>
+  <div class="category_cards">
+    <div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="assets/images/myicon.png" class="img-circle"> 
+        </div>  
+        <div>
+          <pre>
+          ..........
+          ..........
+          ..........
+          ..........
+          </pre>
+        </div>   
+      </div>     
+      <h5>Costumer Support</h5>
+      <p>14 job vacancy</p>
+      <button class="btn btn-sm category-btn">Know More</button>
+    </div>
+    <div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="assets/images/myicon.png" class="img-circle"> 
+        </div>  
+        <div>
+          <pre>
+          ..........
+          ..........
+          ..........
+          ..........
+          </pre>
+        </div>   
+      </div>     
+      <h5>Costumer Support</h5>
+      <p>14 job vacancy</p>
+      <button class="btn btn-sm category-btn">Know More</button>
+    </div>
+    <div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="assets/images/myicon.png" class="img-circle"> 
+        </div>  
+        <div>
+          <pre>
+          ..........
+          ..........
+          ..........
+          ..........
+          </pre>
+        </div>   
+      </div>     
+      <h5>Costumer Support</h5>
+      <p>14 job vacancy</p>
+      <button class="btn btn-sm category-btn">Know More</button>
+    </div>
+    <div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <img src="assets/images/myicon.png" class="img-circle"> 
+        </div>  
+        <div>
+          <pre>
+          ..........
+          ..........
+          ..........
+          ..........
+          </pre>
+        </div>   
+      </div>     
+      <h5>Costumer Support</h5>
+      <p>14 job vacancy</p>
+      <button class="btn btn-sm category-btn">Know More</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <script src="./assets/bootstrap/js/jquery.min.js"></script>
+  <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
-</html>
+</html> 
