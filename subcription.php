@@ -1,0 +1,26 @@
+<div class="container subcription-container-holder mb-5 mt-5">
+   <div>
+       <h1>Subcribe To Our Newsletter</h1>
+       <p>New update, notification job alert for job seekers and employers</p>
+       <form action="." method="GET">
+           <input type="email" name="email" id="email" placeholder="type your email">
+               <button>Send</button>
+       </form>
+   </div>
+</div>
+<div class="dots-subcription dots-subcription1">
+   <pre>
+    ..........
+    .......... 
+    ..........
+    .......... 
+   </pre>
+</div>
+<div class="dots-subcription dots-subcription2">
+   <pre>
+    ..........
+    ..........
+    ..........
+    .......... 
+   </pre>
+</div>
