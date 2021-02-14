@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<section class="container-fluid">
     <div class="container d-flex justify-content-between text-dark category-heading pt-5">
       <div>
         <h1>Remote Jobs</h1>
@@ -156,4 +156,4 @@
       <button class="btn btn-sm category-btn">Know More</button>
     </div>
   </div>
-</div>
+</section>

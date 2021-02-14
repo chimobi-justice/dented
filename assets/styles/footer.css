@@ -1,0 +1,25 @@
+#footer {
+    color: #000 !important;
+    height: auto;
+}
+#footer > #footer-wrapper {
+    padding-bottom: 20px;
+}
+#footer > #footer-wrapper > div > h3, p {
+    color: #000;
+    padding: 0px;
+}
+#footer > #footer-wrapper > div > p {
+    width: 147px;
+}
+#footer > #footer-wrapper > div li {
+    list-style: none;
+    padding: 2px 0px 2px 0px;
+}
+#footer > #footer-wrapper > div li a{
+    text-decoration: none;
+    color: #312c2c;
+}
+#footer > #footer-wrapper > div li a:hover{
+    text-decoration: underline;
+}
