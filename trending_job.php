@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mb-5 pb-5">
     <div class="container d-flex justify-content-between text-dark trending-job-heading pt-5">
       <div>
         <h1>Most Trending</h1>
