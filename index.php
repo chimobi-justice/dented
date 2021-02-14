@@ -11,6 +11,9 @@
 
   <?php include('trending_job.php'); ?>
 
+  <?php include('about-section.php'); ?>
+
+
 
   <script src="./assets/bootstrap/js/jquery.min.js"></script>
   <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>

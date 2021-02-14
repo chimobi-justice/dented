@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./assets/styles/herosection.css">    
     <link rel="stylesheet" href="./assets/styles/hero-bottom.css">    
     <link rel="stylesheet" href="./assets/styles/category.css">    
-    <link rel="stylesheet" href="./assets/styles/trending_job.css">    
+    <link rel="stylesheet" href="./assets/styles/trending_job.css"> 
+    <link rel="stylesheet" href="./assets/styles/about-section.css">    
 </head>
 <body>
   <nav id="navbar">

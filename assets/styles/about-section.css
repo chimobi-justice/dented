@@ -1,0 +1,21 @@
+#about-section > .about-holder > .about-my-job-img img {
+    width: 480px;
+    height: 375px;
+    margin: 10px;
+}
+#about-section > .about-holder > .pathners > div > h4 {
+    color: #968383e0;
+    line-height: 1.5em;
+}
+.pathner-border {
+    border: 2px dashed #968383e0;  
+    width: 90%;
+}
+#about-section > .about-holder > .pathners > .about-img-holder img {
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+}
+#about-section > .about-holder > .pathners > .about-img-holder h6 {
+    color: #968383e0;
+}
