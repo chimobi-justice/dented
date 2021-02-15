@@ -15,11 +15,6 @@
 
   <?php include('subcription.php'); ?>
 
+  <?php include('template/footer.php'); ?>
 
-
-  <script src="./assets/bootstrap/js/jquery.min.js"></script>
-  <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
-
-</body>
 </html> 
