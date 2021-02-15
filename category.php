@@ -5,7 +5,7 @@
         <h1>By Category</h1>
       </div>
       <div class="pt-5">
-        <p class="p-5">Explore Category</p>
+        <p class="p-5 text-dark">Explore Category</p>
       </div>
     </div>
   <div class="category_cards">
@@ -24,7 +24,7 @@
         </div>   
       </div>     
       <h5>Costumer Support</h5>
-      <p>14 job vacancy</p>
+      <p  class="text-dark">14 job vacancy</p>
       <button class="btn btn-sm category-btn">Know More</button>
     </div>
     <div>
@@ -42,7 +42,7 @@
         </div>   
       </div>     
       <h5>Costumer Support</h5>
-      <p>14 job vacancy</p>
+      <p class="text-dark">14 job vacancy</p>
       <button class="btn btn-sm category-btn">Know More</button>
     </div>
     <div>
@@ -60,7 +60,7 @@
         </div>   
       </div>     
       <h5>Costumer Support</h5>
-      <p>14 job vacancy</p>
+      <p class="text-dark">14 job vacancy</p>
       <button class="btn btn-sm  category-btn">Know More</button>
     </div>
     <div>
@@ -78,7 +78,7 @@
         </div>   
       </div>     
       <h5>Costumer Support</h5>
-      <p>14 job vacancy</p>
+      <p class="text-dark">14 job vacancy</p>
       <button class="btn btn-sm category-btn">Know More</button>
     </div>
   </div>
@@ -98,7 +98,7 @@
         </div>   
       </div>     
       <h5>Costumer Support</h5>
-      <p>14 job vacancy</p>
+      <p class="text-dark">14 job vacancy</p>
       <button class="btn btn-sm category-btn">Know More</button>
     </div>
     <div>
@@ -116,7 +116,7 @@
         </div>   
       </div>     
       <h5>Costumer Support</h5>
-      <p>14 job vacancy</p>
+      <p class="text-dark">14 job vacancy</p>
       <button class="btn btn-sm category-btn">Know More</button>
     </div>
     <div>
@@ -134,7 +134,7 @@
         </div>   
       </div>     
       <h5>Costumer Support</h5>
-      <p>14 job vacancy</p>
+      <p class="text-dark">14 job vacancy</p>
       <button class="btn btn-sm category-btn">Know More</button>
     </div>
     <div>
@@ -152,7 +152,8 @@
         </div>   
       </div>     
       <h5>Costumer Support</h5>
-      <p>14 job vacancy</p>
+      <p class="text-dark">14 job vacancy</p>
       <button class="btn btn-sm category-btn">Know More</button>
     </div>
   </div>
+</div>

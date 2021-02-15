@@ -5,7 +5,7 @@
         <h1>Remote Jobs</h1>
       </div>
       <div class="pt-5">
-        <p class="p-5">Explore More Jobs</p>
+        <p class="p-5 text-dark">Explore More Jobs</p>
       </div>
     </div>
     <div class="trending-job-cards">

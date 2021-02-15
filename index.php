@@ -13,6 +13,8 @@
 
   <?php include('about-section.php'); ?>
 
+  <?php include('subcription.php'); ?>
+
 
 
   <script src="./assets/bootstrap/js/jquery.min.js"></script>

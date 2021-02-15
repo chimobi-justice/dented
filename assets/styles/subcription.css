@@ -1,0 +1,66 @@
+.subcription-container-holder {
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+    background: #fb7c6d;
+    padding: 15px;
+    border-radius: 9px;
+}
+.subcription-container-holder > h1, p {
+    color: #fff;
+}
+.subcription-container-holder > div > form {
+    width: 50%;
+    height: 55px;
+    margin: 0px auto;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    display: inline-flex;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.subcription-container-holder > div > form input{
+    width: 85%;
+    padding: 10px;
+    font-family: 20px;
+    border: none;
+}
+.subcription-container-holder > div > form > input:focus{
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+}
+.subcription-container-holder > div > form > button {
+    background: #4285F4;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    padding-bottom: 27px;
+    padding-top: 7px;
+    margin: 1px;
+    font-size: 14px;
+    border-radius: 50px;
+    border: 1px solid #4285F4;
+    outline: none;
+}
+/* dots in subcription */
+.dots-subcription pre {
+    color: #fff;
+}
+.dots-subcription1 {
+    position: relative;
+    float: right;
+    right: 16rem;
+    bottom: 15rem;  
+}
+
+.dots-subcription2 {
+    position: relative;
+    float: right;
+    right: 50rem;
+    bottom: 9rem;  
+}

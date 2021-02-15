@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./assets/styles/hero-bottom.css">    
     <link rel="stylesheet" href="./assets/styles/category.css">    
     <link rel="stylesheet" href="./assets/styles/trending_job.css"> 
-    <link rel="stylesheet" href="./assets/styles/about-section.css">    
+    <link rel="stylesheet" href="./assets/styles/about-section.css">
+    <link rel="stylesheet" href="./assets/styles/subcription.css">    
 </head>
 <body>
   <nav id="navbar">
