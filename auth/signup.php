@@ -1,10 +1,24 @@
 <?php 
 
-  $email = $password = '';
-  $errors = ['email' => '', 'password' => ''];
+  $fullname = $email = $password = '';
+  $errors = ['email' => '', 'password' => '', 'fullname' => ''];
   $res = ['message' => ''];
 
   if (isset($_POST['submit'])) {
+    
+    if (empty($_POST['fullname'])) {
+      $errors['fullname'] = 'Required*';
+    } else {
+      $fullname = $_POST['fullname'];
+
+      if (strlen($fullname) < 6) {
+          $errors['fullname'] = 'Fullname too short';
+      } else {
+          if (!preg_match('/^[a-zA-Z]/', $fullname)) {
+            $errors['fullname'] = 'Fullname must be letters only';
+          }
+      } 
+    }
 
     if (empty($_POST['email'])) {
       $errors['email'] = 'Required*';
@@ -40,36 +54,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dented | login</title>
+    <title>Dented | signup</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/styles/login.css">
+    <link rel="stylesheet" href="../assets/styles/signup.css">
 </head>
 <body>
     
-    <form action="login.php" id="loggedIn-form" class="form-group p-4 mt-5 mx-auto h-auto" method="POST">
-        <div class="login-content-holder">
+    <form action="signup.php" id="signup-form" class="form-group p-4 mt-5 mx-auto h-auto" method="POST">
+        <div class="signup-content-holder">
             <h1 class="text-center"><a href="#" title="Dented - Home"><i >Dented</i></a></h1>
-            <h5 class="text-center">Sign in to continue to Dented Jobs Internships</h5>
+            <h5 class="text-center">Sign up to your Dented Jobs Internships</h5>
         </div>
-        <p class="text-center text-danger"><?php echo $res['message']; ?></p>
-        <input type="email" name="email" id="emailAddress" class="form-control w-100 mb-3 mt-4 p-3" 
+        <input type="text" name="fullname" id="fullname" class="form-control  mb-2 p-3"
+        placeholder="Enter your fullname" value="<?php echo htmlspecialchars($fullname);?>">
+        <p id="errResponseFullname" class="text-danger"><?php echo $errors['fullname']; ?></p>         
+        <input type="email" name="email" id="emailAddress" class="form-control w-100 mb-2 mt-4 p-3" 
         placeholder="Enter email address" value="<?php echo htmlspecialchars($email);?>">
         <p id="errResponseEmail" class="text-danger"><?php echo $errors['email']; ?></p>
-        <div class="input-group">
-           <input type="password" name="password" id="password" class="form-control  mb-3 p-3" 
-           placeholder="Enter password" value="<?php echo htmlspecialchars($password);?>">
-           <button id="show-btn" type="button" class="btn btn-sm btn-default bg-gray showPassword">Show</button>
-           <button id="hide-btn" type="button" class="btn btn-sm btn-default bg-gray hidePassword">Hide</button>
-        </div>
+        <input type="password" name="password" id="password" class="form-control  mb-2 p-3" 
+        placeholder="Enter password" value="<?php echo htmlspecialchars($password);?>">
         <p id="errResponsePassword" class="text-danger"><?php echo $errors['password']; ?></p>         
         <button type="submit" name="submit" id="logInBtn" class="btn btn-md c-my-btn w-100 mb-2 p-1">login</button>
-        <div class="d-flex justify-content-between">
-            <div>
-              <a href="#" class="text-dark">Forgotten password</a>
-            </div>
-            <div>
-              <a href="signup.php" class="text-dark">create account signup here</a>
-            </div>
+        <div class="text-right">
+           <a href="login.php" class="text-dark">Already a user signin here</a>
         </div>
     </form>
 
@@ -79,6 +86,6 @@
       </div>
     </footer>
 
-    <script src="../assets/js/login.js"></script>
+    <script src="../assets/js/signup.js"></script>
 </body>
 </html>
