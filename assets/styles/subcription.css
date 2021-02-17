@@ -1,3 +1,8 @@
+.response {
+    position: absolute;
+    top: 71px;
+    right: 1px;
+}
 .subcription-container-holder {
     width: 60%;
     margin: 0px auto;

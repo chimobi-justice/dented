@@ -1,5 +1,8 @@
 <?php 
 
+  error_reporting(E_ALL ^ E_NOTICE);
+  include('../config/db_connect.php');
+
   $fullname = $email = $password = '';
   $errors = ['email' => '', 'password' => '', 'fullname' => ''];
   $res = ['message' => ''];
@@ -42,6 +45,28 @@
         }
       }
     }
+
+    if (!array_filter($errors)) {
+      $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
+      $email = mysqli_real_escape_string($conn, $_POST['email']);
+      $password = mysqli_real_escape_string($conn, $_POST['password']);
+      $hash_password = md5($password);
+
+      $sql = "SELECT emailaddress FROM account WHERE emailaddress = '$email'";
+      $sql_result = mysqli_query($conn, $sql);
+      $check_user_email_address = mysqli_num_rows($sql_result);
+
+      if ($check_user_email_address > 0) {
+        $errors['email'] = 'Email adrress already exit';
+      } else {
+          $sql = "INSERT INTO account(fullname, emailaddress, psw) VALUES('$fullname', '$email', '$hash_password')";
+          $sql_result = mysqli_query($conn, $sql);
+
+          if ($sql_result) {
+            $res['message'] = 'Account created successfully, Please login';
+          }
+      }
+    }
   }
 
 
@@ -62,8 +87,17 @@
     
     <form action="signup.php" id="signup-form" class="form-group p-4 mt-5 mx-auto h-auto" method="POST">
         <div class="signup-content-holder">
-            <h1 class="text-center"><a href="#" title="Dented - Home"><i >Dented</i></a></h1>
+            <h1 class="text-center"><a href="../index.php" title="Dented - Home"><i >Dented</i></a></h1>
             <h5 class="text-center">Sign up to your Dented Jobs Internships</h5>
+        </div>
+        <div>
+          <?php if (!$res) :?>
+            <p></p>
+          <?php elseif($res['message'] === 'Account created successfully, Please login') : ?>  
+            <p id="errMessageDisplay" class="text-center bg-success text-white p-2"><?php echo $res['message']; ?></p>
+          <?php else :?>
+            <p><?php echo $res['message']?></p>
+          <?php endif; ?>
         </div>
         <input type="text" name="fullname" id="fullname" class="form-control  mb-2 p-3"
         placeholder="Enter your fullname" value="<?php echo htmlspecialchars($fullname);?>">
@@ -75,8 +109,13 @@
         placeholder="Enter password" value="<?php echo htmlspecialchars($password);?>">
         <p id="errResponsePassword" class="text-danger"><?php echo $errors['password']; ?></p>         
         <button type="submit" name="submit" id="logInBtn" class="btn btn-md c-my-btn w-100 mb-2 p-1">login</button>
-        <div class="text-right">
-           <a href="login.php" class="text-dark">Already a user signin here</a>
+        <div class="d-flex justify-content-between">
+            <div>
+              <p class="text-dark">already have an account</p>
+            </div>
+            <div>
+              <a href="login.php" class="text-primary">sign in here</a>
+            </div>
         </div>
     </form>
 

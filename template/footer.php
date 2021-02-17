@@ -7,8 +7,8 @@
       <div>
           <h3>Employers</h3>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Sign in</a></li>
-          <li><a href="#">Register</a></li>
+          <li><a href="./auth/login.php">Sign in</a></li>
+          <li><a href="./auth/signup.php">Register</a></li>
       </div>
       <div>
         <h3>Job Seekers</h3>
@@ -37,4 +37,6 @@
   <script src="./assets/bootstrap/js/jquery.min.js"></script>
   <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+
 </body>

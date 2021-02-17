@@ -13,7 +13,13 @@ let hidePassword = document.querySelector('.hidePassword');
 // get password input for hide and show
 let changePassword = document.querySelector('#password');
 
-
+// message to shown after signing up an account and remove message 
+let errMessageDisplay = document.getElementById('errMessageDisplay');
+if (errMessageDisplay) {
+    setTimeout(() => {
+        errMessageDisplay.remove();
+    }, 5000);
+}
 
 // clear display error messages
 const clearErr = () => {

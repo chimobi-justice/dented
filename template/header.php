@@ -25,7 +25,7 @@
         <li><a href="#">Post a job</a></li>
       </ul>
       <div class="loginBtn-holder">
-        <button class="btn btn-md c-my-btn">login</button>
+        <button class="btn btn-md c-my-btn" id="loginBtn">login</button>
       </div>
     </div>
   </nav>
