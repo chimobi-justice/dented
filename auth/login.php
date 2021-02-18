@@ -1,5 +1,8 @@
 <?php 
 
+  error_reporting(E_ALL ^ E_NOTICE);
+  include('../config/db_connect.php');
+
   $email = $password = '';
   $errors = ['email' => '', 'password' => ''];
   $res = ['message' => ''];
@@ -28,6 +31,25 @@
         }
       }
     }
+
+    if (!array_filter($errors)) {
+      $email = mysqli_real_escape_string($conn, $_POST['email']);
+      $password = mysqli_real_escape_string($conn, $_POST['password']);
+      $hash_password = md5($password);
+
+      $sql = "SELECT * FROM account WHERE emailaddress = '$email' AND psw = '$hash_password'";
+      $sql_result = mysqli_query($conn, $sql);
+      $check_user_email_address = mysqli_num_rows($sql_result);
+
+      if ($check_user_email_address > 0) {
+        $user = mysqli_fetch_assoc($sql_result);
+
+        header('location: ../index.php');
+        
+      } else {
+          $res['message'] = 'Wrong Email Address or Password';
+      }
+    }
   }
 
 
@@ -46,12 +68,20 @@
 </head>
 <body>
     
-    <form action="login.php" id="loggedIn-form" class="form-group p-4 mt-5 mx-auto h-auto" method="POST">
+    <form action="<?php echo $_SERVER['PHP_SELF'];?>" id="loggedIn-form" class="form-group p-4 mt-5 mx-auto h-auto" method="POST">
         <div class="login-content-holder">
             <h1 class="text-center"><a href="#" title="Dented - Home"><i >Dented</i></a></h1>
             <h5 class="text-center">Sign in to continue to Dented Jobs Internships</h5>
         </div>
-        <p class="text-center text-danger"><?php echo $res['message']; ?></p>
+        <div>
+          <?php if (!$res['message']) :?>
+            <p></p>
+          <?php elseif($res['message'] == 'Wrong Email Address or Password') : ?>  
+            <p id="errMessageDisplay" class="text-center bg-danger text-white p-2"><?php echo $res['message']; ?></p>
+          <?php else :?>
+            <p class="text-center bg-danger text-white p-2"><?php echo $res['message']?></p>
+          <?php endif; ?>
+        </div>
         <input type="email" name="email" id="emailAddress" class="form-control w-100 mb-3 mt-4 p-3" 
         placeholder="Enter email address" value="<?php echo htmlspecialchars($email);?>">
         <p id="errResponseEmail" class="text-danger"><?php echo $errors['email']; ?></p>
@@ -68,7 +98,7 @@
               <a href="#" class="text-dark">Forgotten password</a>
             </div>
             <div>
-              <a href="signup.php" class="text-dark">create account signup here</a>
+              <a href="signup.php" class="text-primary">create account signup here</a>
             </div>
         </div>
     </form>

@@ -12,6 +12,14 @@ let psw = document.getElementById('password');
 let pswErrFeed = document.getElementById('errResponsePassword');
 // button to click and show password
 
+// message to shown after signing up an account and remove message 
+let errMessageDisplay = document.getElementById('errMessageDisplay');
+if (errMessageDisplay) {
+    setTimeout(() => {
+        errMessageDisplay.remove();
+    }, 5000);
+}
+
 
 // clear display error messages
 const clearErr = () => {
