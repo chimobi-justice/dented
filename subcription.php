@@ -60,7 +60,7 @@
    <div>
        <h1>Subcribe To Our Newsletter</h1>
        <p>New update, notification job alert for job seekers and employers</p>
-       <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
            <input type="email" name="email" id="email" placeholder="type your email" value="<?php echo htmlspecialchars($email);?>">
             <button type="submit" name="sendNewsLetter">Send</button>
        </form>

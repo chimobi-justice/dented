@@ -85,7 +85,8 @@
 </head>
 <body>
     
-    <form action="signup.php" id="signup-form" class="form-group p-4 mt-5 mx-auto h-auto" method="POST">
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="signup-form"
+        class="form-group p-4 mt-5 mx-auto h-auto col-lg-4 col-md-4 col-sm-12" method="POST">
         <div class="signup-content-holder">
             <h1 class="text-center"><a href="../index.php" title="Dented - Home"><i >Dented</i></a></h1>
             <h5 class="text-center">Sign up to your Dented Jobs Internships</h5>

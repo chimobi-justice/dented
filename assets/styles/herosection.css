@@ -19,7 +19,6 @@
     color: #968383e0;
     padding: 5px;
 }
-#hero-section > .hero-wrapper > div > #hero-btn-click {
-    background: #fb7c6d;
-    color: #fff;
+#getStartedBtn:active {
+    transform: scale(0.8);
 }

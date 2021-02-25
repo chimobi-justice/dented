@@ -18,6 +18,10 @@
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 6px;
 }
+.trending-job-cards > div:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+}
 .trending-job-cards > div > div {
     align-items: center;
 }
