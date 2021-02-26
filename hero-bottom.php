@@ -14,7 +14,7 @@
         <h6 class="text-dark">Newsletter Subscribers</h6>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-12 text-center">
-        <button class="btn btn-lg c-my-btn">Post a job</button>
+        <button class="btn btn-lg c-my-btn" id="postJob">Post a job</button>
       </div>
     </div>
   </div>

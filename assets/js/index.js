@@ -2,6 +2,8 @@
 const loginBtn = document.getElementById('loginBtn');
 // click get started button to redirect user to login
 const getStartedBtn = document.getElementById('getStartedBtn');
+// button to click to post a job
+const postJob = document.getElementById('postJob');
 // sucription request responses
 let sucriptionResponse = document.querySelector('.response');
 
@@ -20,6 +22,13 @@ const btnGetStarted = () => {
     }
 }
 getStartedBtn.addEventListener('click', btnGetStarted);
+
+const postTheJob = () => {
+    if (postJob) {
+        location.href = 'auth/login.php';
+    }
+} 
+postJob.addEventListener('click', postTheJob);
 
 // anded timeout for removing response
 if (sucriptionResponse) {
