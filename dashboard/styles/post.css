@@ -1,0 +1,15 @@
+#form {
+    background: #fff;
+}
+#submitBtn {
+    cursor: progress;
+}
+#msgBody {
+    resize: none;
+}
+.response {
+    width: 30%;
+    position: absolute;
+    top: 0px;
+    right: 1px;
+}

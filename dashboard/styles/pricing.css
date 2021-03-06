@@ -1,0 +1,17 @@
+#pricing > #pricing-container > .price-card-holder > .price-card {
+    background: #fff;
+    color: #000;
+    height: auto;
+    margin-bottom: 9px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#pricing > #pricing-container > .price-card-holder > .price-card > div div > span.pricing-amount {
+    font-size: 2.5em;
+}
+#pricing > #pricing-container > .price-card-holder > .price-card:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+}

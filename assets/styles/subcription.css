@@ -2,6 +2,7 @@
     position: absolute;
     top: 71px;
     right: 1px;
+    width: 25%;
 }
 .subcription-container-holder {
     width: 60%;
@@ -69,3 +70,27 @@
     right: 50rem;
     bottom: 9rem;  
 }
+
+@media screen  and (max-width: 576px) {
+    .response {
+        position: absolute;
+        top: 66px;
+        right: 1px;
+        width: 50%;
+    }
+    .subcription-container-holder {
+        width: 100%;
+    }
+    .subcription-container-holder > div > h1 {
+        font-size: 2em;
+    }
+    .subcription-container-holder > div > form {
+        width: 90%;
+    }
+    .dots-subcription {
+        display: none;
+    }
+    .subcription-container-holder > div > form > button {
+       width: 20%;
+    }
+} 

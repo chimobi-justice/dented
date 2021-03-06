@@ -1,24 +1,17 @@
-// click login button to redirect user to login
-const loginBtn = document.getElementById('loginBtn');
 // click get started button to redirect user to login
 const getStartedBtn = document.getElementById('getStartedBtn');
 // button to click to post a job
 const postJob = document.getElementById('postJob');
 // sucription request responses
 let sucriptionResponse = document.querySelector('.response');
+// get fullyear
+let copyRight = document.getElementById('copyright');
 
-// login  button function
-const clickLoginBtn = () => {
-    if (loginBtn) {
-        location.href = 'auth/login.php';
-    }
-}
-loginBtn.addEventListener('click', clickLoginBtn);
 
 // get started  button function
 const btnGetStarted = () => {
     if (getStartedBtn) {
-        location.href = 'auth/login.php';
+        location.href = 'auth/signup.php';
     }
 }
 getStartedBtn.addEventListener('click', btnGetStarted);
@@ -30,9 +23,12 @@ const postTheJob = () => {
 } 
 postJob.addEventListener('click', postTheJob);
 
-// anded timeout for removing response
+// added timeout for removing response
 if (sucriptionResponse) {
     setTimeout(() => {
         sucriptionResponse.remove();
     }, 5000);
 }
+
+let D = new Date();
+copyRight.textContent = D.getFullYear();

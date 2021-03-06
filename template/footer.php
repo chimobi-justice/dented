@@ -1,37 +1,46 @@
   <footer id="footer">
-    <div class="container d-flex justify-content-around mb-3" id="footer-wrapper">
+    <div class="container mb-3" id="footer-wrapper">
       <div>
-          <h1><i>Dented</i></h1>
-          <p>An ultimate solution for remote jobs</p>
+          <h4><i>Dented</i></h4>
+          <p>An ultimate solution</p>
+          <p>for remote jobs</p>
       </div>
       <div>
-          <h3>Employers</h3>
-          <li><a href="#">Home</a></li>
-          <li><a href="./auth/login.php">Sign in</a></li>
-          <li><a href="./auth/signup.php">Register</a></li>
+          <h4>Employers</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="auth/login.php">Sign in</a></li>
+            <li><a href="auth/signup.php">Register</a></li>
+          </ul>
       </div>
       <div>
-        <h3>Job Seekers</h3>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Post a job</a></li>
+        <h4>Job Seekers</h4>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="dashboard/pricing.php">Pricing</a></li>
+          <li><a href="auth/signup.php">Post a job</a></li>
+        </ul>
       </div>
       <div>
-        <h3>About</h3>
-        <li><a href="#">Success stories</a></li>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Team</a></li>
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">Success stories</a></li>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
       </div>
       <div>
-        <h3>General</h3>
-        <li><a href="#">News</a></li>
-        <li><a href="#">FAQS</a></li>
-        <li><a href="#">Contact us</a></li>
+        <h4>General</h4>
+        <ul>
+          <li><a href="#">News</a></li>
+          <li><a href="#">FAQS</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
       </div>
     </div>
-      <div class="footer-copyright text-center">
-        <p><small>&copy; All rights reserved <i>Dented</i> | justice foundation &cross;</small></p>
-      </div>
+    <div class="footer-copyright text-center">
+        <p><small>&copy; <span id="copyright"></span> All rights reserved <i>Dented</i> | justice foundation &cross;</small></p>
+    </div>
   </footer>
 
   <script src="./assets/bootstrap/js/jquery.min.js"></script>

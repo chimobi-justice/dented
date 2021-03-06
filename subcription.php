@@ -44,13 +44,13 @@
    <?php if (!$res) :?>
       <p></p>
    <?php elseif ($res['message'] === 'Email sent, you\'ll receive our newsletter') :?>
-      <p class="text-white text-center bg-success p-3 w-25 mx-auto response"><?php echo $res['message']; ?></p>
+      <p class="text-dark text-center alert alert-success p-3 mx-auto response"><?php echo $res['message']; ?></p>
    <?php elseif ($res['message'] === 'Email Already Exit') :?>
-      <p class="text-white text-center bg-danger p-3 w-25 mx-auto response"><?php echo $res['message']; ?></p>   
+      <p class="text-dark text-center alert alert-danger p-3 mx-auto response"><?php echo $res['message']; ?></p>   
    <?php elseif ($res['message'] === 'Email can\'t be blank') :?>
-      <p class="text-white text-center bg-danger p-3 w-25 mx-auto response"><?php echo $res['message']; ?></p>
+      <p class="text-dark text-center alert alert-danger p-3 mx-auto response"><?php echo $res['message']; ?></p>
    <?php elseif ($res['message'] === 'Please Enter A Valid Email Address') :?>
-      <p class="text-white text-center bg-danger p-3 w-25 mx-auto response"><?php echo $res['message']; ?></p>
+      <p class="text-dark text-center alert alert-danger p-3 mx-auto response"><?php echo $res['message']; ?></p>
    <?php else :?> 
          <p><?php echo $res['message']; ?></p>
    <?php endif;?>      
