@@ -2,20 +2,20 @@
     background: #fff;
     height: auto;
 }
-#hero-section .hero-wrapper {
+/* #hero-section .hero-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 80%;
     margin: 0px auto;
     padding: 3rem 0rem 3rem 0rem;
-}
-#hero-section > .hero-wrapper > div > h1 {
+} */
+#hero-section > .hero-wrapper > div > div > div > h1 {
     color: #312c2c;
-    padding: 5px;
+    padding: -2px;
     font-size: 3.2em;
 }
-#hero-section .hero-wrapper > div > p {
+#hero-section .hero-wrapper > div > div > div > p {
     color: #968383e0;
     padding: 5px;
 }

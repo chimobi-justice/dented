@@ -85,13 +85,11 @@
           <?php if (!$res) :?>
             <p></p>
           <?php elseif($res['message'] === 'Email adrress not found') : ?>  
-            <p id="errMessageDisplay" class="text-center bg-danger text-white p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']; ?></p>
           <?php elseif($res['message'] === 'Please Enter A Valid Email Address') : ?>  
-            <p id="errMessageDisplay" class="text-center bg-danger text-white p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']; ?></p>
           <?php elseif($res['message'] === 'Email Address Required*') : ?>  
-            <p id="errMessageDisplay" class="text-center bg-danger text-white p-2"><?php echo $res['message']; ?></p>
-          <?php elseif($res['message'] === 'You Are Caught Trying Processing Wrong Address') : ?>  
-            <p id="errMessageDisplay" class="text-center bg-danger text-white p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']; ?></p>
           <?php else :?>
             <p><?php echo $res['message']?></p>
           <?php endif; ?>

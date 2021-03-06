@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 80px;
+    padding: 10px;
+    margin-left: 20%;
+    background: #fff;
+    border-bottom: 1px solid #cfcfcf;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+#navbar > #menu-icon {
+    display: block;
+    padding-top: 13px;
+    cursor: pointer;
+}
+#navbar > #menu-icon > .icon{
+    width: 30px;
+    height: 2px;
+    margin: 5px;
+    border: 2px solid #000;
+}
+#navbar > #menu-icon > .icon2 {
+    margin-left: 10px;
+}
+#navbar > .user-profile {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    color: #000;
+}
+#navbar > .user-profile > p {
+    padding-top: 17px;
+    padding-right: 10px;
+}
+#navbar > div.user-profile .user-profile-photo {
+    margin-top: 6px;
+    padding: 5px;
+    cursor: pointer; 
+}
+#navbar > div.user-profile .user-profile-photo > img{
+    width: 35px;
+    height: 40px;
+    border-radius: 50%; 
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.aside-nav {
+    width: 20%;
+    background: #000;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+}
+.aside-nav > h1#header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    height: 80px;
+}
+.aside-nav > h1#header > a {
+    text-decoration: none;
+    color: #fff;
+}
+.aside-nav > .list {
+    margin-top: 1.5rem;
+    padding: 12px;
+    height: auto;
+}
+.aside-nav > .list > .list-item {
+    margin-top: 1rem;
+    padding: 5px;
+    height: auto;
+}
+.aside-nav > .list > .list-item > a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+.aside-nav > .list > .list-item > a:hover{
+    background: #fff;
+    color: #000;
+}
+#main-body {
+    margin-left: 20%;
+    margin-top: 50rem;
+    color: #000;
+}

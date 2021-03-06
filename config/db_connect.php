@@ -1,7 +1,8 @@
 <?php 
 
-    ##connect to database
+    define('ROOT_URL', 'http://localhost/dented/index.php');
 
+    ##connect to database
     define('DB_HOST', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');

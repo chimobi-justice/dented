@@ -50,7 +50,7 @@
         $_SESSION['email'] = $user['emailaddress'];
 
 
-        header('location: ../index.php');
+        header('location: ../dashboard/post.php');
       } else {
           $res['message'] = 'Wrong Email Address or Password';
       }
@@ -83,9 +83,9 @@
           <?php if (!$res['message']) :?>
             <p></p>
           <?php elseif($res['message'] === 'Wrong Email Address or Password') : ?>  
-            <p id="errMessageDisplay" class="text-center bg-danger text-white p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']; ?></p>
           <?php else :?>
-            <p class="text-center bg-danger text-white p-2"><?php echo $res['message']?></p>
+            <p class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']?></p>
           <?php endif; ?>
         </div>
         <input type="email" name="email" id="emailAddress" class="form-control w-100 mb-3 mt-4 p-3" 

@@ -1,38 +1,52 @@
 .trending-job-heading {
     color: #312c2c;
     width: 90%;
+    flex-direction: row;
 }
-.trending-job-cards {
-    width: 90%;
-    margin: 0px auto;
-    display: flex;
-    justify-content: space-around;
+.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container > a {
+    text-decoration: none;
+    display: block;
 }
-.trending-job-cards > div {
+.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container > a > .company-card {
     background: #fff;
     color: #000;
-    width: 30%;
     height: auto;
     margin-bottom: 9px;
-    padding: 15px;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
-.trending-job-cards > div:hover {
+.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container >  a > .company-card:hover {
     transform: translateY(-4px);
     cursor: pointer;
 }
-.trending-job-cards > div > div {
+.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container >  a > .company-card > div {
     align-items: center;
 }
-.trending-job-cards > div > div > h6 > small {
+.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container >  a > .company-card > div > h6 > small {
     color: #fd9dae;
 }
-.trending-job-cards > div > div > img {
-    width: 55px;
-    margin-top: 15px;
-    border-radius: 50%; 
+.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container >  a > .company-card > div > img {
+    width: 61px;
+    margin-top: 35px;
+    border-radius: 50%;
+    height: 55px;
 }
-.trending-job-cards > div > div > h5 {
+.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container >  a > .company-card > div > h5 {
     width: 100%;
 }
+
+@media screen and (max-width: 576px) {
+    .trending-job-heading {
+        flex-direction: column;
+        text-align: center;
+    }
+    .trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container >  a > .company-card > div > img {
+        width: 100px;
+        margin-top: 35px;
+        border-radius: 50%;
+        height: 80px;
+    }
+}
+

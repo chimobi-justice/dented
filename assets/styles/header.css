@@ -9,6 +9,9 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #navbar {
+    border-bottom: 1px solid #e4dddd; 
+}
+/* #navbar {
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #e4dddd; 
@@ -37,12 +40,16 @@ body {
     color: #5d5959;
     padding-top: 10px;
 }
-#navbar > #container > ul > li > a:hover {
+#navbar > #container> ul > li > a:hover {
     text-decoration: underline;
-    color: #6d6969;
-}
+    color: #6d6969; */
+/* } */
 .loginBtn-holder {
     margin-top: 15px;
+}
+#loginBtn {
+    margin-right: 10px;
+    border: 1px solid #fb7c6d;
 }
 .c-my-btn {
     background: #fb7c6d;

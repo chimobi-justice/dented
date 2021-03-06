@@ -95,7 +95,7 @@
           <?php if (!$res) :?>
             <p></p>
           <?php elseif($res['message'] === 'Account created successfully, Please login') : ?>  
-            <p id="errMessageDisplay" class="text-center bg-success text-white p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-success text-dark p-2"><?php echo $res['message']; ?></p>
           <?php else :?>
             <p><?php echo $res['message']?></p>
           <?php endif; ?>

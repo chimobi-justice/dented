@@ -1,3 +1,6 @@
+.detailed {
+    width: 75%;
+}
 .job-find-detail {
     color: #624098c2;
 }
@@ -11,3 +14,16 @@
 #postJob:active {
     transform: scale(1.2);
 }
+
+@media screen and (max-width: 576px) {
+    .detailed {
+        width: 100%;
+    }
+    .job-find-detail {
+        text-align: center;
+        padding: 10px;
+    }
+    .detailed-text {
+        font-size: 1.5em;
+    }
+} 
