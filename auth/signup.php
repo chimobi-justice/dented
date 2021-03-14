@@ -110,15 +110,10 @@
         placeholder="Enter password" value="<?php echo htmlspecialchars($password);?>">
         <p id="errResponsePassword" class="text-danger"><?php echo $errors['password']; ?></p>         
         <button type="submit" name="submit" id="logInBtn" class="btn btn-md c-my-btn w-100 mb-2 p-1">login</button>
-        <div class="d-flex justify-content-between">
-            <div>
-              <p class="text-dark">already have an account</p>
-            </div>
-            <div>
-              <a href="login.php" class="text-primary">sign in here</a>
-            </div>
-        </div>
     </form>
+    <div class="text-center">
+       <p class="text-dark">already have an account?<a href="login.php" class="text-primary">sign in</a></p>
+    </div>
 
     <footer id="footer">
       <div class="footer-copyright text-center">
