@@ -9,38 +9,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #navbar {
-    width: 100%;
-    background: #fff;
     border-bottom: 1px solid #e4dddd; 
-}
-#navbar > #container {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0px auto;
-}
-#navbar > #container > .brand-holder  {
-    margin-top: 11px;
-}
-#navbar > #container > .brand-holder > h2 > i > .brand {
-    color: #624098c2;
-    text-decoration: none;
-}
-#navbar > #container > ul li {
-    display: inline-flex;
-    list-style: none;
-    padding: 5px;
-    margin: 5px;
-}
-#navbar > #container > ul > li > a {
-    text-decoration: none;
-    color: #5d5959;
-    padding-top: 10px;
-}
-#navbar > #container > ul > li > a:hover {
-    text-decoration: underline;
-    color: #6d6969;
-}
+}   
 .loginBtn-holder {
     margin-top: 15px;
 }

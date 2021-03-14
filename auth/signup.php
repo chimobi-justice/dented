@@ -86,7 +86,7 @@
 <body>
     
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="signup-form"
-        class="form-group p-4 mt-5 mx-auto h-auto col-lg-4 col-md-4 col-sm-12" method="POST">
+        class="form-group p-4 mt-5 mx-auto h-auto col-md-4 col-sm-10 col-xs-12" method="POST">
         <div class="signup-content-holder">
             <h1 class="text-center"><a href="../index.php" title="Dented - Home"><i >Dented</i></a></h1>
             <h5 class="text-center">Sign up to your Dented Jobs Internships</h5>
@@ -95,7 +95,7 @@
           <?php if (!$res) :?>
             <p></p>
           <?php elseif($res['message'] === 'Account created successfully, Please login') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-success text-dark p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-success text-dark p-2"><i class="fa fa-check-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p>
           <?php else :?>
             <p><?php echo $res['message']?></p>
           <?php endif; ?>
@@ -126,6 +126,7 @@
       </div>
     </footer>
 
+    <script src="https://use.fontawesome.com/690d11afa2.js"></script>
     <script src="../assets/js/signup.js"></script>
 </body>
 </html>

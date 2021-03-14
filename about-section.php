@@ -9,7 +9,7 @@
             <div class="col-md-6 col-sm-12">
                 <div class="pathners m-2">
                     <div class="mb-4 m-2">
-                        <h4 class="pb-5 m-1">The finder has been created to foster long-time business relations and network build on trust and quality</h4>
+                        <h4 class="pb-5 m-1">The Dented has been created to foster long-time business relations and network build on trust and quality</h4>
                     </div>
                     <div class="pathner-border mt-4 mb-5 m-2"></div>
                     <div class="about-img-holder m-1">

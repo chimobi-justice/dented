@@ -1,0 +1,14 @@
+#footer {
+    margin-left: 20%;
+    margin-top: 5rem;
+    color: #000;
+}
+
+@media screen and (max-width: 576px) {
+    #footer {
+        margin-left: 0px;
+        margin-top: 5rem;
+        color: #000;
+        width: 100%;
+    }
+}   

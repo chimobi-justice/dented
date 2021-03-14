@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="category_cards container">
-          <div class="row category-cards-wrapper">
+          <div class="row row-flex category-cards-wrapper">
               <?php foreach($categories as $category) :?>
                   <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
                       <div class="category_hold_detail p-4">
@@ -44,7 +44,7 @@
           </pre>
                               </div>
                           </div>
-                          <h5><?php echo htmlspecialchars($category['job_role']); ?></h5>
+                          <h6><?php echo htmlspecialchars($category['job_role']); ?></h6>
                           <p  class="text-dark">14 job vacancy</p>
                           <a href="lib/category_job.php?categoryjobs=<?php echo htmlspecialchars($category['job_role']); ?>" class="btn btn-sm category-btn">View More</a>
                       </div>

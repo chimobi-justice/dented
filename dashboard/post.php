@@ -82,11 +82,11 @@
         <?php if(!$res) :?>
             <p></p>
         <?php elseif($res['message'] === 'Posted successfully') :?>  
-            <p class="alert alert-success text-dark text-center response p-3"><?php echo $res['message']; ?></p> 
+            <p class="alert alert-success text-dark text-center response p-3"><i class="fa fa-check-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p> 
         <?php elseif($res['message'] === 'Error: please browse for a file before clicking the Submit button') :?>  
-            <p class="alert alert-danger text-dark text-center response p-3"><?php echo $res['message']; ?></p>
+            <p class="alert alert-danger text-dark text-center response p-3"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>  <?php echo $res['message']; ?></p>
         <?php elseif($res['message'] === 'ERROR: your file is larger than 5 megabytes in size') :?>  
-            <p class="alert alert-danger text-dark text-center response p-3"><?php echo $res['message']; ?></p> 
+            <p class="alert alert-danger text-dark text-center response p-3"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>  <?php echo $res['message']; ?></p> 
         <?php elseif($res['message'] === 'ERROR: file not uploaded please try again') :?>  
             <p class="alert alert-danger text-dark text-center response p-3"><?php echo $res['message']; ?></p>                         
         <?php endif; ?>      

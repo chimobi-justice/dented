@@ -2,14 +2,9 @@
     background: #fff;
     height: auto;
 }
-/* #hero-section .hero-wrapper {
-    display: flex;
-    justify-content: space-around;
+#hero-section > .hero-wrapper > div {
     align-items: center;
-    width: 80%;
-    margin: 0px auto;
-    padding: 3rem 0rem 3rem 0rem;
-} */
+}
 #hero-section > .hero-wrapper > div > div > div > h1 {
     color: #312c2c;
     padding: -2px;

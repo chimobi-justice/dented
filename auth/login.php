@@ -48,9 +48,12 @@
         $_SESSION['id'] = $user['id'];
         $_SESSION['fullname'] = $user['fullname'];
         $_SESSION['email'] = $user['emailaddress'];
+        $_SESSION['scrtpsw'] = $user['psw'];
+        $_SESSION['uploads'] = $user['uploads'];
 
 
-        header('location: ../dashboard/post.php');
+
+        header('location: ../dashboard/index.php');
       } else {
           $res['message'] = 'Wrong Email Address or Password';
       }
@@ -74,7 +77,7 @@
 <body>
     
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="loggedIn-form" 
-        class="form-group p-4 mt-5 mx-auto h-auto col-lg-4 col-sm-12" method="POST">
+        class="form-group p-4 mt-5 mx-auto h-auto col-md-4 col-sm-10 col-xs-12" method="POST">
         <div class="login-content-holder">
             <h1 class="text-center"><a href="../index.php" title="Dented - Home"><i >Dented</i></a></h1>
             <h5 class="text-center">Sign in to continue to Dented Jobs Internships</h5>
@@ -83,7 +86,7 @@
           <?php if (!$res['message']) :?>
             <p></p>
           <?php elseif($res['message'] === 'Wrong Email Address or Password') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>  <?php echo $res['message']; ?></p>
           <?php else :?>
             <p class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']?></p>
           <?php endif; ?>
@@ -113,6 +116,7 @@
       </div>
     </footer>
 
+    <script src="https://use.fontawesome.com/690d11afa2.js"></script>
     <script src="../assets/js/login.js"></script>
 </body>
 </html>

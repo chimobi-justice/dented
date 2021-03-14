@@ -85,11 +85,11 @@
           <?php if (!$res) :?>
             <p></p>
           <?php elseif($res['message'] === 'Email adrress not found') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></p>
           <?php elseif($res['message'] === 'Please Enter A Valid Email Address') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></p>
           <?php elseif($res['message'] === 'Email Address Required*') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></p>
           <?php else :?>
             <p><?php echo $res['message']?></p>
           <?php endif; ?>
@@ -106,6 +106,7 @@
       </div>
     </footer>
 
+    <script src="https://use.fontawesome.com/690d11afa2.js"></script>
     <script src="../assets/js/forgotpsw.js"></script>
   </body>
 </html>

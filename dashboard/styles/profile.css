@@ -1,6 +1,3 @@
-#main-body {
-    margin-left: 20%;
-    margin-top: 5rem;
-    color: #000;
-    background: red;
+.main-body > #form {
+    margin-top: 20%;
 }
