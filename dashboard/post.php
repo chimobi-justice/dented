@@ -52,12 +52,13 @@
                 unlink($fileTempLoc);
             }
             
-            $insert_sql = "INSERT INTO company(company_name, company_location, job_role, job_time, company_url, job_description, uploads) VAlues('$company_name',
+            $insert_sql = "INSERT INTO company(company_name, company_location, job_role, job_time, company_url, job_description, account_id, uploads) VAlues('$company_name',
                                          '$company_location',
                                          '$job_role',
                                          '$job_time',
                                          '$company_url',
                                          '$msgBody',
+                                         '$user_id',
                                          '$rndNum')"; 
                 if (mysqli_query($conn, $insert_sql)) {                  
                     if ($insert_sql) {
