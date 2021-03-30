@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-.company_logo {
+/* .company_logo {
     width: auto;
     height: auto;
 }
@@ -14,7 +14,7 @@
 }
 .description {
     line-height: 2em;
-}
+} */
 
 .c-my-btn {
     background: #fb7c6d;

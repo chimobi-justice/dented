@@ -19,7 +19,7 @@ create TABLE `company` (
     `uploads` VARCHAR(255) NOT NULL,
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (account_id) REFERENCES `account`(id)
-) ENGINE = InnoDB;;
+) ENGINE = InnoDB;
 
 
 

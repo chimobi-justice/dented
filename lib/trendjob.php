@@ -36,27 +36,70 @@
         <a href="<?php echo ROOT_URL; ?>" class="btn btn-md mt-2 c-my-btn">Back</a>
     </div>
     <section class="container-fluid mb-5 pb-5 pt-5">
-        <div class="trending-job-cards container">
-        <div class="row trending-job-cards-wrapper">
-            <?php foreach($companies as $company) :?>
-                <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
-                    <a href="../view.php?viewjobid=<?php echo $company['id']; ?>">
-                    <div class="company-card d-flex justify-content-between">
-                        <div class="p-3 text-dark">
-                            <h6><small><?php echo htmlspecialchars($company['company_name']); ?></small></h6>
-                            <h5><?php echo htmlspecialchars($company['company_location']); ?></h5>
-                            <h6><?php echo htmlspecialchars($company['job_role']); ?></h6>
-                            <h6><?php echo htmlspecialchars($company['job_time']); ?></h6>
-                            <small><?php echo htmlspecialchars($company['job_description']); ?></small>
-                        </div>
-                        <div class="p-3">
-                            <img src="../assets/uploads/<?php echo htmlspecialchars($company['uploads']); ?>" class="img-circle" alt="<?php echo htmlspecialchars($company['company_name']); ?> logo">                 
-                        </div>
-                        </div>  
-                    </a>
+        <?php if ($companies) : ?>
+            <div class="trending-job-cards container">
+            <div class="row trending-job-cards-wrapper">
+                <?php foreach($companies as $company) :?>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <a href="../view.php?viewjobid=<?php echo $company['id']; ?>">
+                        <div class="company-card d-flex justify-content-between">
+                            <div class="p-3 text-dark">
+                                <h6><small><?php echo htmlspecialchars($company['company_name']); ?></small></h6>
+                                <h5><?php echo htmlspecialchars($company['company_location']); ?></h5>
+                                <h6><?php echo htmlspecialchars($company['job_role']); ?></h6>
+                                <h6><?php echo htmlspecialchars($company['job_time']); ?></h6>
+                                <small><?php echo htmlspecialchars($company['job_description']); ?></small>
+                            </div>
+                            <div class="p-3">
+                                <img src="../assets/uploads/<?php echo htmlspecialchars($company['uploads']); ?>" class="img-circle" alt="<?php echo htmlspecialchars($company['company_name']); ?> logo">                 
+                            </div>
+                            </div>  
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            </div>
+        <?php else : ?>
+            <div class="trending-job-cards container">
+                <div class="row trending-job-cards-wrapper">
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">  
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xm-12 trending-job-cards-container">
+                        <div class="p-5 skeleton">
+                    </div>
                 </div>
-            <?php endforeach; ?>
-        </div>
+                <div class="text-dark p-1 pl-3">looding...</div>
+            <?php endif;?>
         </div>
     </section>
 </body>

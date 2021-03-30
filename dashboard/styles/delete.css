@@ -1,0 +1,11 @@
+#form {
+    background: #fff;
+    box-shadow: 0px 2px 8px 0px #f1f1f1;
+}
+#form > .content > h1 > a{
+    text-decoration: none;
+    color: #624098c2;
+}
+#form > .content > h5 {
+    color: #312c2c
+}

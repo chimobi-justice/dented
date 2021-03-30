@@ -17,3 +17,60 @@
 #getStartedBtn:active {
     transform: scale(0.8);
 }
+
+@media screen and (max-width: 440px) {
+    #hero-section > .hero-wrapper > div > div > div > img {
+        width: 100%;
+    }  
+    #hero-section > .hero-wrapper > div > div > div > h1 {
+        color: #312c2c;
+        padding: -2px;
+        font-size: 2.5em;
+    }
+    #hero-section .hero-wrapper > div > div > div > p {
+        padding: 3px;
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 430px) {
+    #hero-section > .hero-wrapper > div > div > div > img {
+        width: 100%;
+    }  
+    #hero-section > .hero-wrapper > div > div > div > h1 {
+        color: #312c2c;
+        padding: -2px;
+        font-size: 2.5em;
+    }
+    #hero-section .hero-wrapper > div > div > div > p {
+        padding: 3px;
+        font-size: 1.2em;
+    }
+} 
+@media screen and (max-width: 411px) {
+    #hero-section > .hero-wrapper > div > div > div > img {
+        width: 100%;
+    }  
+    #hero-section > .hero-wrapper > div > div > div > h1 {
+        color: #312c2c;
+        padding: -2px;
+        font-size: 2.5em;
+    }
+    #hero-section .hero-wrapper > div > div > div > p {
+        padding: 3px;
+        font-size: 1.2em;
+    }
+} 
+@media screen and (max-width: 360px) {
+    #hero-section > .hero-wrapper > div > div > div > img {
+        width: 100%;
+    }  
+    #hero-section > .hero-wrapper > div > div > div > h1 {
+        color: #312c2c;
+        padding: -2px;
+        font-size: 2.5em;
+    }
+    #hero-section .hero-wrapper > div > div > div > p {
+        padding: 3px;
+        font-size: 1.2em;
+    }
+} 

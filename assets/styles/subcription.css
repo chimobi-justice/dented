@@ -76,7 +76,7 @@
         position: absolute;
         top: 66px;
         right: 1px;
-        width: 50%;
+        width: 100%;
     }
     .subcription-container-holder {
         width: 100%;
@@ -92,5 +92,49 @@
     }
     .subcription-container-holder > div > form > button {
        width: 20%;
+    }
+} 
+@media screen and (max-width: 440px) {
+    .subcription-container-holder {
+        width: 100%;
+    }
+    .subcription-container-holder > div > h1 {
+        font-size: 2em;
+    }
+    .subcription-container-holder > div > p {
+        font-size: 1.3em;        
+    }
+} 
+@media screen and (max-width: 430px) {
+    .subcription-container-holder {
+        width: 100%;
+    }
+    .subcription-container-holder > div > h1 {
+        font-size: 1.9em;
+    }
+    .subcription-container-holder > div > p {
+        font-size: 1.2em;        
+    }
+} 
+@media screen and (max-width: 411px) {
+    .subcription-container-holder {
+        width: 100%;
+    }
+    .subcription-container-holder > div > h1 {
+        font-size: 1.9em;
+    }
+    .subcription-container-holder > div > p {
+        font-size: 1.3em;        
+    }
+} 
+@media screen and (max-width: 360px) {
+    .subcription-container-holder {
+        width: 100%;
+    }
+    .subcription-container-holder > div > h1 {
+        font-size: 1.5em;
+    }
+    .subcription-container-holder > div > p {
+        font-size: 1em;        
     }
 } 

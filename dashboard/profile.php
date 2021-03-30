@@ -24,6 +24,9 @@
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $res['message'] = 'Please Enter A Valid Email Address';
             }
+            if (!preg_match('/^[a-zA-Z\s]+$/', $user_fullname)) {
+                $res['message'] = 'Fullname must be letters and space only';
+            }
         } else {
             $res['message'] = 'All fields are required*';
         }
@@ -32,6 +35,10 @@
         $imageTmpLoc = $_FILES['profile_image']['tmp_name'];
         $imageUploadType = $_FILES['profile_image']['type'];
         $imageUploadSize = $_FILES['profile_image']['size'];
+
+         if ($imageUploadSize > 5242880) {
+            $res['message'] = 'your file is larger than 5 megabytes';
+        }
 
         if (!array_filter($res)) {
             $user_fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
@@ -66,8 +73,6 @@
                     mysqli_free_result($result);
 
                     mysqli_close($conn);
-
-
                 }
             } else {
                 $res['message'] = 'Email Address Not Found';
@@ -93,6 +98,8 @@
                     <p></p>
                 <?php elseif($res['message'] === 'All fields are required*') : ?>  
                     <p class="text-center alert alert-danger text-dark p-2 response"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p>
+                <?php elseif($res['message'] === 'Fullname must be letters and space only') : ?>  
+                    <p class="text-center alert alert-danger text-dark p-2 response"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p>    
                 <?php elseif($res['message'] === 'File not uploaded please try again') : ?>  
                     <p class="text-center alert alert-danger text-dark p-2 response"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p> 
                 <?php elseif($res['message'] === 'profile updated') : ?>  
@@ -102,7 +109,11 @@
                  <?php elseif($res['message'] === 'Please Enter A Valid Email Address') : ?>  
                     <p class="text-center alert alert-danger text-dark p-2 response"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p>
                 <?php elseif($res['message'] === 'Email Address Not Found') : ?>  
-                    <p class="text-center alert alert-danger text-dark p-2 response"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p>                  
+                    <p class="text-center alert alert-danger text-dark p-2 response"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p>
+                <?php elseif($res['message'] === 'Please broswe for a file') : ?>  
+                    <p class="text-center alert alert-danger text-dark p-2 response"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p>
+                <?php elseif($res['message'] === 'your file is larger than 5 megabytes') : ?>  
+                    <p class="text-center alert alert-danger text-dark p-2 response"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <?php echo $res['message']; ?></p>                          
                 <?php else :?>
                     <p class="text-center alert alert-danger text-dark p-2"><?php echo $res['message']?></p>
                 <?php endif; ?>
