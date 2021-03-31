@@ -11,6 +11,8 @@ let psw = document.getElementById('password');
 // get error for password
 let pswErrFeed = document.getElementById('errResponsePassword');
 // button to click and show password
+let copyRight = document.getElementById('copyright');
+
 
 // message to shown after signing up an account and remove message 
 let errMessageDisplay = document.getElementById('errMessageDisplay');
@@ -36,3 +38,6 @@ const clearErr = () => {
 fullName.addEventListener('keyup', clearErr);
 emailAddress.addEventListener('keyup', clearErr);
 psw.addEventListener('keyup', clearErr);
+
+let D = new Date();
+copyRight.textContent = D.getFullYear(); 

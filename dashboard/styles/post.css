@@ -13,3 +13,12 @@
     top: 0px;
     right: 1px;
 }
+
+@media screen and (max-width: 576px) {
+    .response {
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        right: 1px;
+    }
+}

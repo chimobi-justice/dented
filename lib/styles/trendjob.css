@@ -46,6 +46,34 @@ body {
 .trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container >  a > .company-card > div > h5 {
     width: 100%;
 }
+.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container > .skeleton {
+    height: 150px;
+    background: #0000008f;
+    margin-bottom: 9px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    animation-name: slide-colors;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide-colors{
+    0%{
+        left: 0px;
+        background-color: gray;
+    }
+    50%{
+        left: 50px;
+        background-color: rgb(59, 58, 58);
+    }
+    100%{
+        left: 100px;
+        background-color: #0009;
+    }
+}
+
 .c-my-btn {
     background: #fb7c6d;
     color: #fff;

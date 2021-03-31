@@ -13,6 +13,8 @@ let hidePassword = document.querySelector('.hidePassword');
 // get password input for hide and show
 let changePassword = document.querySelector('#password');
 
+let copyRight = document.getElementById('copyright');
+
 // message to shown after signing up an account and remove message 
 let errMessageDisplay = document.getElementById('errMessageDisplay');
 if (errMessageDisplay) {
@@ -53,3 +55,6 @@ const hidePasswordInputText = () => {
 }
 hidePassword.addEventListener('click', hidePasswordInputText);
 // End of hide and show function
+
+let D = new Date();
+copyRight.textContent = D.getFullYear(); 

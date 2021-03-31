@@ -25,10 +25,10 @@
       $password = $_POST['password'];
 
       if (strlen($password) < 6) {
-        $errors['password'] = 'length not long enough';
+        $errors['password'] = 'Weak password';
       } else {
         if (!preg_match('/^[a-zA-Z]+[0-9]+$/', $password)) {
-          $errors['password'] = 'password must be letters and a number';
+          $errors['password'] = 'password must be letters and number';
         }
       }
     }
@@ -48,10 +48,8 @@
         $_SESSION['id'] = $user['id'];
         $_SESSION['fullname'] = $user['fullname'];
         $_SESSION['email'] = $user['emailaddress'];
-        $_SESSION['scrtpsw'] = $user['psw'];
+        $_SESSION['scrtpasswd'] = $user['psw'];
         $_SESSION['uploads'] = $user['uploads'];
-
-
 
         header('location: ../dashboard/index.php');
       } else {
@@ -105,14 +103,14 @@
             <a href="forgotpsw.php" class="text-dark">Forgotten password</a>
         </div>        
         <button type="submit" name="submit" id="logInBtn" class="btn btn-md c-my-btn w-100 mb-2 p-1">login</button>
-        <div class="text-center">
-            <a href="signup.php" class="text-primary">create an account signup here</a>
-        </div>
     </form>
+    <div class="text-center">
+        <p>create an account?<a href="signup.php" class="text-primary">signup</a></p>
+    </div>
 
     <footer id="footer">
       <div class="footer-copyright text-center">
-        <p><small>&copy; All rights reserved <i>Dented</i> | justice foundation &cross;</small></p>
+        <p><small>&copy; <span id="copyright"></span> All rights reserved <i>Dented</i> | justice foundation &cross;</small></p>
       </div>
     </footer>
 

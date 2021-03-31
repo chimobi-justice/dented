@@ -16,14 +16,14 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white" id="navbar">
     <div class="container" id="container">
+    <h2><a class="navbar-brand brand" href="#"><i>Dented</i></a></h2>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <h2><a class="navbar-brand brand" href="#"><i>Dented</i></a></h2>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Browse all jobs <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="lib/trendjob.php">Browse all jobs <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Find a job</a>
@@ -33,10 +33,10 @@
           </li>
         </ul>
         <div>
-        <form class="form-inline my-2 my-lg-0">
+        <div>
             <a  href="auth/login.php" class="btn btn-md" id="loginBtn"><i class="fa fa-sign-in" aria-hidden="true"></i>  Login</a>  
             <a  href="auth/signup.php" class="btn c-my-btn btn-md" id="signupBtn"><i class="fa fa-user-plus" aria-hidden="true"></i>  sign up</a>
-        </form>
+        </div>
         </div>
       </div>
     </div>

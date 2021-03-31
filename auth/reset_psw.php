@@ -88,7 +88,7 @@
 
     <footer id="footer">
       <div class="footer-copyright text-center">
-        <p><small>&copy; All rights reserved <i>Dented</i> | justice foundation &cross;</small></p>
+        <p><small>&copy; <span id="copyright"></span> All rights reserved <i>Dented</i> | justice foundation &cross;</small></p>
       </div>
     </footer>
 

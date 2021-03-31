@@ -4,9 +4,9 @@
 
     session_start();
     $fullname = $_SESSION['fullname'];
-    $suer_id = $_SESSION['id'];
+    $user_id = $_SESSION['id'];
 
-    $sql = "SELECT uploads FROM account WHERE id = '$suer_id'";
+    $sql = "SELECT uploads FROM account WHERE id = '$user_id'";
     $result = mysqli_query($conn, $sql);
 
     $profile_image = mysqli_fetch_assoc($result);
@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="./styles/admin_header.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/profile.css">
+    <link rel="stylesheet" href="./styles/update.css">
+    <link rel="stylesheet" href="./styles/delete.css">
     <link rel="stylesheet" href="./styles/admin_footer.css">
     <title>Dented | dashboard</title>
 </head>
@@ -88,7 +90,7 @@
         <ul class="list-mobile">
             <li class="list-item-mobile"><a href="index.php"><i class="fa fa-tachometer" aria-hidden="true"></i>  Dashboard</a></li>
             <li class="list-item-mobile"><a href="profile.php"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a></li>
-            <li class="list-item-mobile"><a href="post.php"><i class="fa fa-clipboard" aria-hidden="true"></i>  Post a job</a></li>
+            <li class="list-item-mobile"><a href="post.php"><i class="fa fa-clipboard" aria-hidden="true"></i>  Post job</a></li>
             <li class="list-item-mobile"><a href="setting.php"><i class="fa fa-cog" aria-hidden="true"></i>  Settings</a></li>
             <li class="list-item-mobile" name="logout"><a href="../logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>  Logout</a></li>
         </ul>
@@ -102,7 +104,7 @@
         <ul class="list">
             <li class="list-item"><a href="index.php"><i class="fa fa-tachometer" aria-hidden="true"></i>  Dashboard</a></li>
             <li class="list-item"><a href="profile.php"><i class="fa fa-user" aria-hidden="true"></i>  Profile</a></li>
-            <li class="list-item"><a href="post.php"><i class="fa fa-clipboard" aria-hidden="true"></i>  Post a job</a></li>
+            <li class="list-item"><a href="post.php"><i class="fa fa-clipboard" aria-hidden="true"></i>  Postjob</a></li>
             <li class="list-item"><a href="setting.php"><i class="fa fa-cog" aria-hidden="true"></i>Settings  </a></li>
             <li class="list-item" name="logout"><a href="../logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>  Logout</a></li>
         </ul>

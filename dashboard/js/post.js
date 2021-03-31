@@ -1,5 +1,3 @@
-// click logged out button to redirect user to login
-const userAcct = document.getElementById('userAcct');
 // get company fields
 const company_name = document.getElementById('companyName');
 const company_location = document.getElementById('companyLocation');
@@ -11,9 +9,6 @@ const submitBtn = document.getElementById('submitBtn');
 
 // success responses
 let response = document.querySelector('.response');
-// get fullyear
-let copyRight = document.getElementById('copyright');
-
 
 
 // check input > 0 && undisaled button and get company fields
@@ -42,7 +37,5 @@ if (response) {
     }, 5000);
 }
 
-let D = new Date();
-copyRight.textContent = D.getFullYear();
 
 

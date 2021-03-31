@@ -26,31 +26,61 @@
           <a href="view.php" class="text-dark">Explore Category</a>
         </div>
       </div>
-      <div class="category_cards container">
-          <div class="row row-flex category-cards-wrapper">
-              <?php foreach($categories as $category) :?>
-                  <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
-                      <div class="category_hold_detail p-4">
-                          <div class="d-flex justify-content-between align-center">
-                              <div>
-                                  <img src="assets/images/myicon.png" class="img-circle"> 
-                              </div>  
-                              <div>
-          <pre>
-          ..........
-          ..........
-          ..........
-          ..........
-          </pre>
-                              </div>
-                          </div>
-                          <h6><?php echo htmlspecialchars($category['job_role']); ?></h6>
-                          <p  class="text-dark">14 job vacancy</p>
-                          <a href="lib/category_job.php?categoryjobs=<?php echo htmlspecialchars($category['job_role']); ?>" class="btn btn-sm category-btn">View More</a>
-                      </div>
-                  </div>
-              <?php endforeach; ?>
-
-          </div>
+        <?php if ($categories) : ?>
+            <div class="category_cards container">
+                <div class="row row-flex category-cards-wrapper">
+                    <?php foreach($categories as $category) :?>
+                        <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                            <div class="category_hold_detail p-4">
+                                <div class="d-flex justify-content-between align-center">
+                                    <div>
+                                        <img src="assets/images/myicon.png" class="img-circle"> 
+                                    </div>  
+                                    <div>
+         <pre>
+         ..........
+         ..........
+         ..........
+         ..........
+         </pre>
+                                    </div>
+                                </div>
+                                <h6><?php echo htmlspecialchars($category['job_role']); ?></h6>
+                                <p  class="text-dark">14 job vacancy</p>
+                                <a href="lib/category_job.php?categoryjobs=<?php echo htmlspecialchars($category['job_role']); ?>" class="btn btn-sm category-btn">View More</a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+        <?php else : ?>
+            <div class="category_cards container">
+                <div class="row row-flex category-cards-wrapper">
+                    <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                        <div class="skeleton p-4"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                        <div class="skeleton p-4"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                        <div class="skeleton p-4"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                        <div class="skeleton p-4"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                        <div class="skeleton p-4"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                        <div class="skeleton p-4"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                        <div class="skeleton p-4"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xm-12 category-cards-container">
+                        <div class="skeleton p-4"></div>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
       </div>  
   </section>

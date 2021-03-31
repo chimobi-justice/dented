@@ -1,10 +1,11 @@
-let bodyClick = document.getElementsByTagName('body');
 let navigationBar = document.getElementById('navbar');
 let menu = document.getElementById('menu-icon');
 let closeMenu = document.getElementById('close-icon');
 let asideNav = document.querySelector('.aside-nav');
 let mainBody = document.querySelector('.main-body');
-    footerText = document.querySelector('#footer');
+    footer = document.querySelector('#footer'),
+    footerText = document.querySelector('#footer_copyright');
+
 
 
 let icon = document.querySelector('.icon2');
@@ -14,14 +15,8 @@ let mobileNavigationBar = document.getElementById('navbar-mobile');
 let mobileMenu = document.getElementById('menu-icon-mobile');
 let mobileCloseMenu = document.getElementById('close-icon-mobile');
 let mobileAsideNav = document.querySelector('.aside-nav-mobile');
+let copyRight = document.getElementById('copyright');
 
-bodyClick.onclick = () => {
-    if (bodyClick) {
-        mobileAsideNav.style.display = 'none';
-        console.log('click body');
-    }
-
-}
 
 menu.onclick = () => {
     if (menu) {
@@ -31,8 +26,12 @@ menu.onclick = () => {
         menu.style.display = 'none';
         closeMenu.style.display = 'block';
         mainBody.style.marginLeft = '5%';
-        footerText.style.marginLeft = '5%';
+        footer.style.marginLeft = '5%';
+        footerText.style.position = 'relative';
+        footerText.style.bottom = '8px';
+        footerText.style.right = '3%';
         asideNav.classList.toggle('displayToggle');
+        asideNav.style.overflow = 'hidden';
     }
 }
 
@@ -44,7 +43,10 @@ closeMenu.onclick = () => {
         menu.style.display = 'block';
         closeMenu.style.display = 'none';
         mainBody.style.marginLeft = '20%';
-        footerText.style.marginLeft = '20%';
+        footer.style.marginLeft = '20%';
+        footerText.style.position = 'relative';
+        footerText.style.bottom = '8px';
+        footerText.style.right = '3%';
         asideNav.classList.toggle('displayToggle');
     }
 }
@@ -68,3 +70,6 @@ if (res) {
         res.remove();
     }, 5000);
 }
+
+let D = new Date();
+copyRight.textContent = D.getFullYear();

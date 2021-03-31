@@ -109,6 +109,9 @@ body {
     color: #fff;
     padding: 10px;
 }
+.aside-nav > .list > .list-item > a i{
+    padding-right: 30px;
+}
 .aside-nav > .list > .list-item > a:hover{
     background: #fff;
     color: #000;

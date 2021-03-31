@@ -77,7 +77,7 @@
         <title>Dented | Post a job</title>
     </head>
 
-    <?php include('./template/header.php'); ?>
+    <?php include('template/admin_header.php'); ?>
 
     <div>
         <?php if(!$res) :?>
@@ -107,6 +107,6 @@
         <input type="submit" name="submit" value="submit" id="submitBtn" disabled="disabled"class="btn btn-lg btn-secondary w-100 mb-2 mt-2 p-2">
     </form>
 
-    <?php include('./template/footer.php'); ?>
+    <?php include('template/admin_footer.php'); ?>
 
 </html>

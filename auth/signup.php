@@ -17,8 +17,8 @@
       if (strlen($fullname) < 6) {
           $errors['fullname'] = 'Fullname too short';
       } else {
-          if (!preg_match('/^[a-zA-Z]/', $fullname)) {
-            $errors['fullname'] = 'Fullname must be letters only';
+          if (!preg_match('/^[a-zA-Z\s]+$/', $fullname)) {
+            $errors['fullname'] = 'Fullname must be letters and space only';
           }
       } 
     }
@@ -38,10 +38,10 @@
       $password = $_POST['password'];
 
       if (strlen($password) < 6) {
-        $errors['password'] = 'length not long enough';
+        $errors['password'] = 'Weak password';
       } else {
         if (!preg_match('/^[a-zA-Z]+[0-9]+$/', $password)) {
-          $errors['password'] = 'password must be letters and a number';
+          $errors['password'] = 'password must be letters and number';
         }
       }
     }
@@ -109,7 +109,7 @@
         <input type="password" name="password" id="password" class="form-control  mb-2 p-3" 
         placeholder="Enter password" value="<?php echo htmlspecialchars($password);?>">
         <p id="errResponsePassword" class="text-danger"><?php echo $errors['password']; ?></p>         
-        <button type="submit" name="submit" id="logInBtn" class="btn btn-md c-my-btn w-100 mb-2 p-1">login</button>
+        <button type="submit" name="submit" id="logInBtn" class="btn btn-md c-my-btn w-100 mb-2 p-1">Sign up</button>
     </form>
     <div class="text-center">
        <p class="text-dark">already have an account?<a href="login.php" class="text-primary">sign in</a></p>
@@ -117,7 +117,7 @@
 
     <footer id="footer">
       <div class="footer-copyright text-center">
-        <p><small>&copy; All rights reserved <i>Dented</i> | justice foundation &cross;</small></p>
+        <p><small>&copy; <span id="copyright"></span> All rights reserved <i>Dented</i> | justice foundation &cross;</small></p>
       </div>
     </footer>
 

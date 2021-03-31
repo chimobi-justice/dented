@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#updatejob-container > .v-wrapper > .updatejob-card-container > {
+    text-decoration: none;
+}
+#updatejob-container > .updatejob-wrapper > .updatejob-card-container > .updatejob-card {
+    background: #fff;
+    color: #000;
+    height: auto;
+    margin-bottom: 9px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#updatejob-container > .updatejob-wrapper > .updatejob-card-container > .updatejob-card > div {
+    align-items: center;
+}
+#updatejob-container > .updatejob-wrapper > .updatejob-card-container > .updatejob-card > div > h6 > small {
+    color: #fd9dae;
+}
+#updatejob-container > .updatejob-wrapper > .updatejob-card-container > .updatejob-card > div > img {
+    width: 61px;
+    margin-top: 35px;
+    border-radius: 50%;
+    height: 55px;
+}
+#updatejob-container > .updatejob-wrapper > .updatejob-card-container > .updatejob-card > div > h5 {
+    width: 100%;
+}

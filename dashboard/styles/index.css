@@ -2,8 +2,10 @@
     padding: 0;
     margin: 0;
 }
-
-#postjob-container > .postjob-wrapper > .postjob-card-container >  .postjob-card {
+#postjob-container > .postjob-wrapper > .postjob-card-container > a {
+    text-decoration: none;
+}
+#postjob-container > .postjob-wrapper > .postjob-card-container > a > .postjob-card {
     background: #fff;
     color: #000;
     height: auto;
@@ -13,23 +15,23 @@
     box-sizing: border-box;
     overflow: hidden;
 }
-#postjob-container > .postjob-wrapper > .postjob-card-container >  .postjob-card:hover {
+#postjob-container > .postjob-wrapper > .postjob-card-container > a > .postjob-card:hover {
     transform: translateY(-4px);
     cursor: pointer;
 }
-#postjob-container > .postjob-wrapper > .postjob-card-container >  .postjob-card > div {
+#postjob-container > .postjob-wrapper > .postjob-card-container > a > .postjob-card > div {
     align-items: center;
 }
-#postjob-container > .postjob-wrapper > .postjob-card-container >  .postjob-card > div > h6 > small {
+#postjob-container > .postjob-wrapper > .postjob-card-container > a > .postjob-card > div > h6 > small {
     color: #fd9dae;
 }
-#postjob-container > .postjob-wrapper > .postjob-card-container >  .postjob-card > div > img {
+#postjob-container > .postjob-wrapper > .postjob-card-container > a > .postjob-card > div > img {
     width: 61px;
     margin-top: 35px;
     border-radius: 50%;
     height: 55px;
 }
-#postjob-container > .postjob-wrapper > .postjob-card-container >  .postjob-card > div > h5 {
+#postjob-container > .postjob-wrapper > .postjob-card-container > a > .postjob-card > div > h5 {
     width: 100%;
 }
 

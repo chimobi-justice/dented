@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #fff;
+    background: #F7F7F7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.c-my-btn {
+    background: #fb7c6d;
+    color: #fff;
+}
+.category-job-apply-card-wrapper > .category-job-apply-card-container >  .category-job-apply-card {
+    align-items: center;
+}
+.category-job-apply-card-wrapper > .category-job-apply-card-container >  .category-job-apply-card > .category-job-card {
+    align-items: center;
+
+}
+.category-job-apply-card-wrapper > .category-job-apply-card-container >  .category-job-apply-card > .category-job-card div > img {
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+}

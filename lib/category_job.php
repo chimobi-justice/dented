@@ -2,18 +2,21 @@
 
     include('../config/db_connect.php');
 
-    $category_job_role = mysqli_real_escape_string($conn, $_GET['categoryjobs']);
+    if (isset($_GET['categoryjobs'])) {
+        $category = mysqli_real_escape_string($conn, $_GET['categoryjobs']);
 
-    $query = "SELECT * FROM company WHERE job_role = '$category_job_role'";
+        $query = "SELECT * FROM company WHERE job_role = '$category'";
+        
+        $result = mysqli_query($conn, $query);
+
+        $category_job_details = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        
+
+        mysqli_free_result($result);
+
+        mysqli_close($conn);
       
-    $result = mysqli_query($conn, $query);
-
-    $category_job_details = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    
-
-    mysqli_free_result($result);
-
-    mysqli_close($conn);
+    }    
 
 
 ?>
@@ -35,31 +38,63 @@
         </div>
 
         <section class="container-fluid mb-5 pb-5 pt-5">
-        <div class="job-cards container">
-            <div class="row job-cards-wrapper">
-                <?php foreach($category_job_details as $job_details) :?>
-                    <div class="col-md-4 col-sm-12 col-xm-12 job-cards-container">
-                        <div class="job_hold_detail p-4">
-                            <div class="d-flex justify-content-between align-center">
-                                <div>
-                                    <img src="../assets/images/myicon.png" class="img-circle"> 
-                                </div>  
-                                <div>
-            <pre>
-            ..........
-            ..........
-            ..........
-            ..........
-            </pre>
+           <?php if ($category_job_details) : ?>
+                <div class="job-cards container">
+                    <div class="row job-cards-wrapper">
+                        <?php foreach($category_job_details as $job_details) :?>
+                            <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                                <div class="job_hold_detail p-4">
+                                    <div class="d-flex justify-content-between align-center">
+                                        <div>
+                                            <img src="../assets/images/myicon.png" class="img-circle"> 
+                                        </div>  
+                                        <div>
+        <pre>
+        ..........
+        ..........
+        ..........
+        ..........
+        </pre>
+                                        </div>
+                                    </div>
+                                    <h5><?php echo htmlspecialchars($job_details['job_role']); ?></h5>
+                                    <h5><?php echo htmlspecialchars($job_details['company_name']); ?></h5>
+                                    <a href="catjob.php?categoryjobs=<?php echo htmlspecialchars($job_details['id']); ?>" class="btn btn-sm category-btn">know More</a>
                                 </div>
                             </div>
-                            <h5><?php echo htmlspecialchars($job_details['job_role']); ?></h5>
-                            <h5><?php echo htmlspecialchars($job_details['company_name']); ?></h5>
-                            <a href="lib/catjob.php?categoryjobs=<?php echo htmlspecialchars($job_details['job_role']); ?>" class="btn btn-sm category-btn">know More</a>
+                        <?php endforeach; ?>
+                    </div>
+            <?php else : ?>
+                <div class="job-cards container">
+                    <div class="row row-flex job-cards-wrapper">
+                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                            <div class="skeleton p-4"></div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                            <div class="skeleton p-4"></div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                            <div class="skeleton p-4"></div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                            <div class="skeleton p-4"></div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                            <div class="skeleton p-4"></div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                            <div class="skeleton p-4"></div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                            <div class="skeleton p-4"></div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
+                            <div class="skeleton p-4"></div>
                         </div>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                    <div class="text-dark p-1">looding...</div>
+                </div>  
+            <?php endif; ?>
         </div>
     </section>
         
