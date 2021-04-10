@@ -3,6 +3,14 @@
   error_reporting(E_ALL ^ E_NOTICE);
   include('../config/db_connect.php');
 
+  session_start();
+
+  $user_id = $_SESSION['id'];
+
+  if (!$user_id) {
+      header('location: .././auth/login.php');
+  }
+
   $sql = "SELECT * FROM company ORDER BY created_at DESC";
   // make query and get result
   
@@ -46,9 +54,8 @@
                             <div class="p-3 text-dark">
                                 <h6><small><?php echo htmlspecialchars($company['company_name']); ?></small></h6>
                                 <h5><?php echo htmlspecialchars($company['company_location']); ?></h5>
-                                <h6><?php echo htmlspecialchars($company['job_role']); ?></h6>
+                                <h6><?php echo htmlspecialchars($company['category']); ?></h6>
                                 <h6><?php echo htmlspecialchars($company['job_time']); ?></h6>
-                                <small><?php echo htmlspecialchars($company['job_description']); ?></small>
                             </div>
                             <div class="p-3">
                                 <img src="../assets/uploads/<?php echo htmlspecialchars($company['uploads']); ?>" class="img-circle" alt="<?php echo htmlspecialchars($company['company_name']); ?> logo">                 

@@ -4,3 +4,6 @@
 #editBtn {
     cursor: progress;
 }
+#editMsgBody {
+    resize: none;
+}

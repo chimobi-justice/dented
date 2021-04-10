@@ -33,9 +33,6 @@
     border-radius: 50%;
     height: 55px;
 }
-.trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container >  a > .company-card > div > h5 {
-    width: 100%;
-}
 
 /* show skeleton */
 .trending-job-cards > .trending-job-cards-wrapper > .trending-job-cards-container > .skeleton {

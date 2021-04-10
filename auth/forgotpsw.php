@@ -5,7 +5,6 @@
 
   session_start();
   $user_id = $_SESSION['id'];
-  $user_full_name = $_SESSION['fullname'];
   $user_email_address = $_SESSION['email'];
 
   $email = '';

@@ -128,3 +128,5 @@
         </form>
 
 <?php include('template/admin_footer.php'); ?>
+
+<script src="./js/settings.js"></script>

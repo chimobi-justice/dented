@@ -43,3 +43,16 @@
     }
 } 
 
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #footer > #footer-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    #footer > #footer-wrapper > div > p {
+        display: inline-block;
+    }
+    #footer > .footer-copyright > p {
+        text-align: center;
+    }
+}
+

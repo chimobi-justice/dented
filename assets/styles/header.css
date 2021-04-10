@@ -15,14 +15,25 @@ body {
     color: #624098c2;
     font-size: 1.5em;
 }
-.loginBtn-holder {
+.navbar-right > li {
     margin-top: 15px;
-}
-#loginBtn {
     margin-right: 10px;
+}
+.navbar-right > li > a {
     border: 1px solid #fb7c6d;
 }
 .c-my-btn {
     background: #fb7c6d;
     color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+    .navbar-right > li > a {
+        display: block;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .navbar-right > li > a {
+        display: block;
+    }
 }

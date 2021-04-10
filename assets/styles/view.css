@@ -3,18 +3,30 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* .company_logo {
+body {
+    color: #fff;
+    background: #F7F7F7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.category-job-card-img-holder {
     width: auto;
     height: auto;
 }
-.company_logo > img {
+.category-job-card-img-holder > img {
     width: 50%;
     height: 300px;
     border-radius: 9px;
 }
-.description {
+#job_description {
     line-height: 2em;
-} */
+}
+.details-job-card > .details-job-card-wrapper > .details-job-apply-card-container > .details-job-apply-card > .details-holder {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.details-job-card { align-items:  center; }
 
 .c-my-btn {
     background: #fb7c6d;
@@ -22,9 +34,61 @@
 }
 
 @media screen and (max-width: 576px) {
-    .company_logo > img {
+    .category-job-card-img-holder > img {
         width: 100%;
         height: 300px;
         border-radius: 9px;
+    }
+    .details-job-card > .details-job-card-wrapper > .details-job-apply-card-container > .details-job-apply-card > .details-holder {
+        flex-direction: column;
+        margin-right: 10rem;
+    }
+    .c-my-btn {
+        margin-right: 12rem;
+    }
+}
+@media screen and (max-width: 440px) {
+    .details-job-card > .details-job-card-wrapper > .details-job-apply-card-container > .details-job-apply-card > .details-holder {
+        flex-direction: column;
+        margin-right: 4rem;
+    }
+    .c-my-btn {
+        margin-right: 12rem;
+    }
+}
+@media screen and (max-width: 414px) {
+    .details-job-card > .details-job-card-wrapper > .details-job-apply-card-container > .details-job-apply-card > .details-holder {
+        flex-direction: column;
+        margin-right: 0rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    .details-job-card > .details-job-card-wrapper > .details-job-apply-card-container > .details-job-apply-card > .details-holder {
+        margin-right: 0rem;
+    }
+    .c-my-btn {
+        margin-right: 12rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .details-job-card > .details-job-card-wrapper > .details-job-apply-card-container > .details-job-apply-card > .details-holder {
+        flex-direction: column;
+        margin-right: 0rem;
+    }
+    .c-my-btn {
+        margin-right: 12rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    .details-job-card > .details-job-card-wrapper > .details-job-apply-card-container > .details-job-apply-card > .details-holder {
+        flex-direction: column;
+    }
+    .c-my-btn {
+        margin-right: 10rem;
+    }
+}
+@media screen and (max-width: 280px) {
+    .c-my-btn {
+        margin-right: 7rem;
     }
 }

@@ -47,6 +47,6 @@
   <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/690d11afa2.js"></script>
-  <script src="./assets/js/index.js"></script>
+  <!-- <script src="./assets/js/index.js"></script> -->
 
 </body>

@@ -2,38 +2,28 @@
 
     include('config/db_connect.php');
 
+    session_start();
 
-        // if (isset($_GET['categoryjobs'])) {
-        //     $category = mysqli_real_escape_string($conn, $_GET['categoryjobs']);
+    $user_id = $_SESSION['id'];
 
-        //     $query = "SELECT * FROM company WHERE job_role = '$category'";
-            
-            // $result = mysqli_query($conn, $query);
+    if (!$user_id) {
+        header('location: ././auth/login.php');
+    }
 
-            // $category_job_details = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            
+    if (isset($_GET['viewjobid'])) {
+        $veiwId = mysqli_real_escape_string($conn, $_GET['viewjobid']);
 
-            // mysqli_free_result($result);
+        $query = "SELECT * FROM company WHERE id = $veiwId";
 
-            // mysqli_close($conn);
+        $result = mysqli_query($conn, $query);
 
-            $sql = "SELECT * FROM company ORDER BY created_at DESC";
-            // make query and get result
-            
-            $result = mysqli_query($conn, $sql);
-          
-            // fetch the resulting row as an array
-          
-            $companies = mysqli_fetch_all($result, MYSQLI_ASSOC);
-          
-          
-            // free result from memory
-            mysqli_free_result($result);
-          
-            // close connection
-            mysqli_close($conn);
-        
-        // }    
+        $company = mysqli_fetch_assoc($result);
+
+        mysqli_free_result($result);
+
+        mysqli_close($conn);
+
+    }
 
 
 ?>
@@ -47,89 +37,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/view.css">
     <title>Dented | view Job</title>
 </head>
 <body>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="styles/category_job.css">
-        <title>Dented | category Jobs</title>
-    </head>
-    <body>
+    <section>
         <div class="container pt-3 m-3">
             <a href="<?php echo ROOT_URL; ?>" class="btn btn-md mt-2 c-my-btn">Back</a>
         </div>
-
-        <section class="container-fluid mb-5 pb-5 pt-5">
-           <?php if ($companies) : ?>
-                <div class="job-cards container">
-                    <div class="row job-cards-wrapper">
-                        <?php foreach($companies as $company) :?>
-                            <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                                <div class="job_hold_detail p-4">
-                                    <div class="d-flex justify-content-between align-center">
-                                        <div>
-                                            <img src="assets/images/myicon.png" class="img-circle"> 
+        <div class="container pt-5 mt-3 mb-5">
+            <div class="row category-job-apply-card-wrapper">
+                <div class="col-md-12 col-sm-12 col-xm-12 category-job-apply-card-container text-dark">
+                    <div class="category-job-apply-card">
+                        <div class="category-job-card-img-holder p-3">
+                            <img src="assets/uploads/<?php echo htmlspecialchars($company['uploads']); ?>" class="img-circle" alt="company logo">    
+                        </div>
+                        <div class="p-3 text-dark">                   
+                           <h5>Company Name: <small><?php echo htmlspecialchars($company['company_name']); ?></small></h5>
+                        </div>
+                        <div id="job_description" class="p-3">
+                            <h4>Job Description:</h4>
+                            <p><?php echo htmlspecialchars($company['job_description']); ?></p>
+                        </div>
+                        <div class="details-job-card container">
+                            <div class="row details-job-card-wrapper">
+                                 <h4 class="p-3">Job Details:</h4>
+                                    <div class="col-md-12 col-sm-12 col-xm-12 mb-3 details-job-apply-card-container bg-white">
+                                        <div class="details-job-apply-card">
+                                            <div class="details-holder p-1">
+                                                <div class="p-3 text-dark">                   
+                                                    <h5>Category: <small><?php echo htmlspecialchars($company['category']); ?></small></h5>
+                                                    <h5>Location: <small><?php echo htmlspecialchars($company['company_location']); ?></small></h5>
+                                                    <h5>Position: <small><?php echo htmlspecialchars($company['job_time']); ?></small></h5>
+                                                    <h5>Date Posted: <small><?php echo htmlspecialchars($company['created_at']); ?></small></h5>
+                                                </div> 
+                                                <div class="p-3 text-dark">
+                                                    <a href="<?php echo htmlspecialchars($company['company_url']); ?>" class="btn btn-md c-my-btn">Apply</a>
+                                                </div>   
+                                            </div>
                                         </div>  
-                                        <div>
-        <pre>
-        ..........
-        ..........
-        ..........
-        ..........
-        </pre>
-                                        </div>
                                     </div>
-                                    <h5><?php echo htmlspecialchars($company['job_role']); ?></h5>
-                                    <h5><?php echo htmlspecialchars($company['company_name']); ?></h5>
-                                    <a href="catjob.php?categoryjobs=<?php echo htmlspecialchars($company['id']); ?>" class="btn btn-sm category-btn">know More</a>
-                                </div>
                             </div>
-                        <?php endforeach; ?>
-                    </div>
-            <?php else : ?>
-                <div class="job-cards container">
-                    <div class="row row-flex job-cards-wrapper">
-                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                            <div class="skeleton p-4"></div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                            <div class="skeleton p-4"></div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                            <div class="skeleton p-4"></div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                            <div class="skeleton p-4"></div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                            <div class="skeleton p-4"></div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                            <div class="skeleton p-4"></div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                            <div class="skeleton p-4"></div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
-                            <div class="skeleton p-4"></div>
-                        </div>
-                    </div>
-                    <div class="text-dark p-1">looding...</div>
-                </div>  
-            <?php endif; ?>
+                        </div>  
+                    </div>                    
+                </div>
+            </div>
         </div>
     </section>
-        
-    </body>
-</html>    
-    
 </body>
-</html>
+</html>    

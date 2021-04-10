@@ -6,17 +6,22 @@
     session_start();
 
     $user_id = $_SESSION['id'];
+
+    if (!$user_id) {
+        header('location: .././auth/login.php');
+    }
+    
     $id = $_GET['id'];
 
-    $company_name = $company_location = $job_role = $job_time = $company_url = $msgBody = '';
+    $company_name = $company_location = $category = $job_time = $company_url = $msgBody = '';
     $res = ['message' => ''];
 
     if (isset($_POST['submit'])) {
         
-        if (!empty($_POST['company_name'] && $_POST['company_location'] && $_POST['job_role'] && $_POST['job_time'] && $_POST['url'] && $_POST['description'])) {
+        if (!empty($_POST['company_name'] && $_POST['company_location'] && $_POST['category'] && $_POST['job_time'] && $_POST['url'] && $_POST['description'])) {
             $company_name = $_POST['company_name'];
             $company_location = $_POST['company_location'];
-            $job_role = $_POST['job_role'];
+            $category = $_POST['category'];
             $job_time = $_POST['job_time'];
             $company_url = $_POST['url'];
             $msgBody = $_POST['description'];
@@ -37,7 +42,7 @@
         if (!array_filter($res)) {
             $company_name = mysqli_real_escape_string($conn, $_POST['company_name']);
             $company_location = mysqli_real_escape_string($conn, $_POST['company_location']);
-            $job_role = mysqli_real_escape_string($conn, $_POST['job_role']);
+            $category = mysqli_real_escape_string($conn, $_POST['category']);
             $job_time = mysqli_real_escape_string($conn, $_POST['job_time']);
             $company_url = mysqli_real_escape_string($conn, $_POST['url']);
             $msgBody = mysqli_real_escape_string($conn, $_POST['description']);
@@ -53,7 +58,7 @@
 
             $sql = "UPDATE company SET comapany_name = '$company_name',
                                        company_location = '$company_location',
-                                       job_role = '$job_role',
+                                       category = '$category',
                                        job_time = '$job_time',
                                        company_url = '$company_url',
                                        job_description = '$msgBody'
@@ -118,7 +123,7 @@
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data" id="form" class="form-group p-4 mt-5 mb-5 mx-auto h-auto col-md-6 col-sm-10 col-xs-12">
         <input type="text" name="company_name" id="editCompanyName" class="form-control w-100 mb-3 mt-2 p-3" placeholder="Company name" value="<?php echo htmlspecialchars($company_name); ?>">
         <input type="text" name="company_location" id="editCompanyLocation" class="form-control w-100 mb-3 mt-2 p-3" placeholder="Location" value="<?php echo htmlspecialchars($company_location); ?>">
-        <input type="text" name="job_role" id="editRole" class="form-control w-100 mb-3 mt-2 p-3" placeholder="Role" value="<?php echo htmlspecialchars($job_role); ?>">
+        <input type="text" name="category" id="editCategory" class="form-control w-100 mb-3 mt-2 p-3" placeholder="Category" value="<?php echo htmlspecialchars($category); ?>">
         <input type="text" name="job_time" id="editJobTime" class="form-control w-100 mb-3 mt-2 p-3" placeholder="full-time/part-time" value="<?php echo htmlspecialchars($job_time); ?>">
         <input type="url" name="url" id="editUrl" class="form-control w-100 mb-3 mt-2 p-3" placeholder="www.example.com" value="<?php echo htmlspecialchars($company_url); ?>">        
         <textarea name="description" id="editMsgBody" cols="20" rows="10" class="form-control w-100 mb-3 mt-2 p-3" placeholder="Full Job description"><?php echo htmlspecialchars($msgBody); ?></textarea>

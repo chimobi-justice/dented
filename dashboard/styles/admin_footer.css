@@ -1,26 +1,38 @@
 #footer {
     margin-left: 20%;
-    margin-top: 5rem;
     color: #000;
 }
 #footer > #footer_copyright {
     position: relative;
     bottom: 0px;
-    top: 260px;
+    top: 350px;
     right: 3%;
 }
 
 @media screen and (max-width: 576px) {
     #footer {
         margin-left: 0px;
-        margin-top: 5rem;
         color: #000;
         width: 100%;
     }
     #footer > #footer_copyright {
         position: relative;
-        bottom: 8px;
+        top: 200px;
         right: 0px;
         left: 0px;
     }
 }     
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #footer {
+        margin-left: 0px;
+        color: #000;
+        width: 100%;
+    }
+    #footer > #footer_copyright {
+        position: relative;
+        top: 200px;
+        right: 0px;
+        left: 0px;
+    }
+} 
