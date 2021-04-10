@@ -1,55 +1,52 @@
-<?php
+<?php 
 
-    include('../config/db_connect.php');
+  error_reporting(E_ALL ^ E_NOTICE);
+  include('../config/db_connect.php');
 
-    session_start();
+  session_start();
 
-    $user_id = $_SESSION['id'];
+  $user_id = $_SESSION['id'];
 
-    if (!$user_id) {
-        header('location: .././auth/login.php');
-    }
+  if (!$user_id) {
+      header('location: .././auth/login.php');
+  }
 
-    if (isset($_GET['categoryjobs'])) {
-        $category = mysqli_real_escape_string($conn, $_GET['categoryjobs']);
+  $sql = "SELECT * FROM company ORDER BY created_at DESC";
+  // make query and get result
+  
+  $result = mysqli_query($conn, $sql);
 
-        $query = "SELECT * FROM company WHERE category = '$category'";
-        
-        $result = mysqli_query($conn, $query);
+  // fetch the resulting row as an array
 
-        $category_job_details = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        
+  $catetgories_companies = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-        mysqli_free_result($result);
+  // free result from memory
+  mysqli_free_result($result);
 
-        mysqli_close($conn);
-      
-    }    
-
+  // close connection
+  mysqli_close($conn);
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="styles/category_job.css">
-        <title>Dented | category Jobs</title>
-    </head>
-    <body>
-        <div class="container pt-3 m-3">
-            <a href="<?php echo ROOT_URL; ?>" class="btn btn-md mt-2 c-my-btn">Back</a>
-        </div>
-
-        <section class="container-fluid mb-5 pb-5 pt-5">
-           <?php if ($category_job_details) : ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/allcategoryjobs.css">
+    <title>Dented | trending jobs</title>
+</head>
+<body>
+     <div class="container pt-3 m-3">
+        <a href="<?php echo ROOT_URL; ?>" class="btn btn-md mt-2 c-my-btn">Back</a>
+    </div>
+    <section class="container-fluid mb-5 pb-5 pt-5">
+           <?php if ($catetgories_companies) : ?>
                 <div class="job-cards container">
                     <div class="row job-cards-wrapper">
-                        <?php foreach($category_job_details as $job_details) :?>
+                        <?php foreach($catetgories_companies as $job_details) :?>
                             <div class="col-md-3 col-sm-12 col-xm-12 job-cards-container">
                                 <div class="job_hold_detail p-4">
                                     <div class="d-flex justify-content-between align-center">
@@ -105,6 +102,5 @@
             <?php endif; ?>
         </div>
     </section>
-        
-    </body>
-</html>    
+</body>
+</html>

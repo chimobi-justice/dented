@@ -2,6 +2,14 @@
 
     include('../config/db_connect.php');
 
+    session_start();
+
+    $user_id = $_SESSION['id'];
+
+    if (!$user_id) {
+        header('location: .././auth/login.php');
+    }
+
     if(isset($_GET['categoryjobs'])) {
         
         $id = mysqli_real_escape_string($conn, $_GET['categoryjobs']);
@@ -37,7 +45,7 @@
         <a href="<?php echo ROOT_URL; ?>" class="btn btn-md mt-2 c-my-btn">Back</a>
     </div>
     <div class="container pt-5 mt-3 mb-5 text-dark">
-        <h3>Apply For Your Best Programming Job Here!</h3>
+        <h3>Apply For Your Best Programming Jobs Here!</h3>
         <p>Seeking For Jobs Apply Here!</p>
     </div>
     <div class="container pt-5 mt-3 mb-5">
@@ -50,7 +58,7 @@
                          </div>
                          <div class="p-3 text-dark">                   
                             <h5><small><?php echo htmlspecialchars($get_company['company_name']); ?></small></h5>
-                            <h6><?php echo htmlspecialchars($get_company['job_role']); ?></h6>
+                            <h6><?php echo htmlspecialchars($get_company['category']); ?></h6>
                          </div>    
                      </div>
                      <div class="p-3 text-dark">

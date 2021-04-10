@@ -26,10 +26,6 @@ body {
     background: #fff!important;
     color: #000;
 }
-.job-cards > .job-cards-wrapper > .job-cards-container > .job_hold_detail > div > div > img {
-    width: 60px;
-    border-radius: 50%;
-}
 .job-cards > .job-cards-wrapper > .job-cards-container > .job_hold_detail:hover > div .text > h2{
     background: #fff!important;
     color: #000;

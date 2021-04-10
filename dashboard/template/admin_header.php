@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./styles/admin_header.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/profile.css">
+    <link rel="stylesheet" href="./styles/post.css">
     <link rel="stylesheet" href="./styles/update.css">
     <link rel="stylesheet" href="./styles/delete.css">
     <link rel="stylesheet" href="./styles/admin_footer.css">

@@ -65,7 +65,6 @@ body {
 #navbar > div.user-profile .user-profile-photo {
     margin-top: 6px;
     padding: 5px;
-    cursor: pointer; 
 }
 #navbar > div.user-profile .user-profile-photo > img{
     width: 35px;
@@ -200,6 +199,110 @@ body {
 
     .aside-nav-mobile {
         width: 85%;
+        height: 100vh;
+        background: #000;
+        position: absolute;
+        top: 0px;
+        z-index: 1;
+    }
+    .aside-nav-mobile > div {
+        border-bottom: 1px solid #ccc;
+        height: 80px;
+    }
+    .aside-nav-mobile > div > h1#header > a {
+        text-decoration: none;
+    }
+    .aside-nav-mobile > .list-mobile {
+        margin-top: 1.5rem;
+        padding: 6px;
+        height: auto;
+    }
+    .aside-nav-mobile > .list-mobile > .list-item-mobile {
+        list-style: none;
+        left: 0px;
+        margin: 1.5rem 0rem 0rem 1rem;
+        height: auto;
+    }
+    .aside-nav-mobile > .list-mobile > .list-item-mobile > a{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+    }
+    .aside-nav-mobile > .list-mobile > .list-item-mobile > a:hover{
+        background: #fff;
+        color: #000;
+    
+    }
+    .aside-nav-mobile > div > #close-icon-mobile {
+        font-size: 2em;
+        right: 50px;
+        cursor: pointer;
+    }
+
+    .main-body {
+        margin-top: 9rem;
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #navbar {
+        display: none;
+    }
+    .aside-nav {
+        display: none;
+    }
+    #navbar-mobile {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 80px;
+        padding: 10px;
+        background: #fff;
+        border-bottom: 1px solid #cfcfcf;
+        position: fixed;
+        top: 0px;
+        z-index: 1;
+    }
+    #navbar-mobile > .menu-holder-mobile > #menu-icon-mobile {
+        display: block;
+        padding-top: 13px;
+        cursor: pointer;
+    }
+    #navbar-mobile > .menu-holder-mobile > #menu-icon-mobile > .icon-mobile{
+        width: 30px;
+        height: 2px;
+        margin: 5px;
+        border: 2px solid #000;
+    }
+    #navbar-mobile > .user-profile-mobile {
+        display: flex;
+        justify-content: space-around;
+        width: auto;
+        color: #000;
+    }
+    #navbar-mobile > .user-profile-mobile > p {
+        padding-top: 17px;
+        padding-right: 3px;
+    }
+    #navbar-mobile > div.user-profile-mobile .user-profile-photo-mobile {
+        margin-top: 6px;
+        padding: 5px;
+        cursor: pointer; 
+    }
+    #navbar-mobile > div.user-profile-mobile .user-profile-photo-mobile > img{
+        width: 35px;
+        height: 40px;
+        border-radius: 50%; 
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .aside-nav-mobile {
+        width: 75%;
         height: 100vh;
         background: #000;
         position: absolute;

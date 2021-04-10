@@ -21,9 +21,22 @@
     background: #fff!important;
     color: #000;
 }
-.category_cards > .category-cards-wrapper > .category-cards-container > .category_hold_detail > div > div > img {
-    width: 60px;
+.category_cards > .category-cards-wrapper > .category-cards-container > .category_hold_detail:hover > div .text > h2{
+    background: #fff!important;
+    color: #000;
+    width: 70px;
+    height: 80px;
     border-radius: 50%;
+}
+.category_cards > .category-cards-wrapper > .category-cards-container > .category_hold_detail > div > .text > h2 {
+    width: 70px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgb(120, 120, 221);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .category_cards > .category-cards-wrapper > .category-cards-container > .category_hold_detail > div > div > pre {
    color: #fff;

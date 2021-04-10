@@ -42,10 +42,9 @@
                       <div class="company-card d-flex justify-content-between">
                           <div class="p-3 text-dark">
                               <h6><small><?php echo htmlspecialchars($company['company_name']); ?></small></h6>
-                              <h5><?php echo htmlspecialchars($company['company_location']); ?></h5>
-                              <h6><?php echo htmlspecialchars($company['job_role']); ?></h6>
+                              <h6><?php echo htmlspecialchars($company['category']); ?></h6>
+                              <h6><?php echo htmlspecialchars($company['company_location']); ?></h6>
                               <h6><?php echo htmlspecialchars($company['job_time']); ?></h6>
-                              <small><?php echo htmlspecialchars($company['job_description']); ?></small>
                           </div>
                           <div class="p-3">
                               <img src="assets/uploads/<?php echo htmlspecialchars($company['uploads']); ?>" class="img-circle" alt="company logo">                 

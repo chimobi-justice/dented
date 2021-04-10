@@ -17,4 +17,6 @@
 
   <?php include('template/footer.php'); ?>
 
+  <script src="assets/js/index.js"></script>
+
 </html> 

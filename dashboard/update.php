@@ -25,7 +25,7 @@
     $company_id = $posts['id'];
     $company_name = $posts['company_name'];
     $company_location = $posts['company_location'];
-    $job_role = $posts['job_role'];
+    $category = $posts['category'];
     $job_time = $posts['job_time'];
     $msgBody = $posts['description'];
     $uploads = $posts['uploads'];
@@ -57,7 +57,7 @@
                                 <div class="p-3 text-dark">
                                     <h6><small><?php echo htmlspecialchars($company_name); ?></small></h6>
                                     <h5><?php echo htmlspecialchars($company_location); ?></h5>
-                                    <h6><?php echo htmlspecialchars($job_role); ?></h6>
+                                    <h6><?php echo htmlspecialchars($category); ?></h6>
                                     <h6><?php echo htmlspecialchars($job_time); ?></h6>
                                     <small><?php echo htmlspecialchars($msgBody); ?></small>
                                     <form method="POST">

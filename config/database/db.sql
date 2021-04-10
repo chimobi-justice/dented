@@ -11,7 +11,7 @@ create TABLE `company` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     `company_name` VARCHAR(255) NOT NULL,
     `company_location` VARCHAR(255) NOT NULL,
-    `job_role` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(255) NOT NULL,
     `job_time` VARCHAR(255) NOT NULL,
     `company_url` VARCHAR(255) NOT NULL,
     `job_description` TEXT,
