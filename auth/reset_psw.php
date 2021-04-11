@@ -5,6 +5,10 @@
   session_start();
   $userid = $_SESSION['id'];
 
+  if (!$user_id) {
+    header('location: .././auth/login.php');
+  }
+
   $password = '';
   $res = ['message' => ''];
 
@@ -64,15 +68,15 @@
           <?php if (!$res['message']) :?>
             <p></p>
           <?php elseif($res['message'] === 'Password Required*') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></i></p>
           <?php elseif($res['message'] === 'Length not long enough') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></p>
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></i></p>
           <?php elseif($res['message'] === 'Password must be letters and a number') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></p>  
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></i></p>  
           <?php elseif($res['message'] === 'Password Updated Successful, Please login') : ?>  
             <p id="errMessageDisplay" class="text-center alert alert-success text-dark p-2"><?php echo $res['message']; ?></p>  
           <?php elseif($res['message'] === 'Password not Updated') : ?>  
-            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></p>    
+            <p id="errMessageDisplay" class="text-center alert alert-danger text-dark p-2"><i class="fa fa-exclamation-circle" aria-hidden="true"> <?php echo $res['message']; ?></i></p>    
           <?php else :?>
             <p class="text-center bg-danger text-white p-2"><?php echo $res['message']?></p>
           <?php endif; ?>
