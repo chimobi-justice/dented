@@ -50,7 +50,7 @@
             if (strlen($user_set_new_psw) < 6) {
               $errors['new_psw'] = 'Weak password';
             } else {
-              if (!preg_match('/^[a-zA-Z]+[0-9]+$/', $user_set_new_psw)) {
+              if (!preg_match('/^[\w .]+$/', $user_set_new_psw)) {
                 $errors['new_psw'] = 'password must be letters and number';
               }
             }
