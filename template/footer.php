@@ -26,15 +26,15 @@
         <ul>
           <li><a href="#">Success stories</a></li>
           <li><a href="#">Overview</a></li>
-          <li><a href="#">Team</a></li>
+          <li><a href="#">Policy Privacy</a></li>
         </ul>
       </div>
       <div>
         <h4>General</h4>
         <ul>
-          <li><a href="#">News</a></li>
+          <li><a href="termsOfuse.php">Terms of Use</a></li>
           <li><a href="#">FAQS</a></li>
-          <li><a href="#">Contact us</a></li>
+          <li><a href="contact.php">Contact us</a></li>
         </ul>
       </div>
     </div>

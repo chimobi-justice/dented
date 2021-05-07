@@ -16,7 +16,6 @@ body {
     font-size: 1.5em;
 }
 .navbar-right > li {
-    margin-top: 15px;
     margin-right: 10px;
 }
 .navbar-right > li > a {
@@ -28,11 +27,17 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+    .navbar-right > li {
+        margin-top: 10px;
+    }
     .navbar-right > li > a {
         display: block;
     }
 }
 @media screen and (min-width: 577px) and (max-width: 992px) {
+    .navbar-right > li {
+        margin-top: 10px;
+    }
     .navbar-right > li > a {
         display: block;
     }

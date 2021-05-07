@@ -1,0 +1,75 @@
+.wrapper-text-summary {
+    width: 75%;
+    margin: 0px auto;
+}
+#contact-form {
+    width: 75%;
+    margin: 0px auto; 
+}
+.input-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.wrapper-text {
+    width: 75%;
+    margin: 0px auto;
+}
+.err {
+    width: auto;
+    float: right;
+}
+textarea {
+    resize: none;
+}
+
+@media screen and (max-width: 576px) {
+    #contact-form {
+        width: 95%;
+        margin: 0px auto; 
+    }
+    .input-flex {
+        flex-direction: column;
+    }
+    .err {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #contact-form {
+        width: 100%;
+    }
+    .input-flex {
+        flex-direction: column;
+    }
+    .wrapper-text-summary {
+        width: 100%;
+    }
+    .wrapper-text {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #contact-form {
+        width: 95%;
+        margin: 0px auto; 
+    }
+    .input-flex {
+        flex-direction: column;
+    }
+    .wrapper-text-summary {
+        width: 95%;
+        margin: 0px auto
+    }
+    .wrapper-text {
+        width: 95%;
+        margin: 0px auto
+    }
+    .err {
+        width: 100%;
+        font-size: 18px;
+    }
+}

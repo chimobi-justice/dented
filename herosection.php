@@ -10,7 +10,7 @@
           </div>
         </div>
         <div class="col-md-6 col-sm-12 col-xm-12">
-          <div >
+          <div class="hero-img-holder">
             <img class="img-responsive img-circle" src="assets/images/herosection-banner-img2.png" alt="hero_banner">
           </div>
         </div>
