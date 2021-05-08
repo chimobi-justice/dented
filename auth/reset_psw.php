@@ -22,7 +22,7 @@
       if (strlen($password) < 6) {
         $res['message'] = 'Length not long enough';
       } else {
-        if (!preg_match('/^[a-zA-Z]+[0-9]+$/', $password)) {
+        if (!preg_match('/^[\w .]+$/', $password)) {
           $res['message'] = 'Password must be letters and a number';
         }
       }

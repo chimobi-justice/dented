@@ -1,8 +1,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="job search, post and apply for a dream jobs">
+    <meta name="keywords" content="CSS,Bootstrap,JavaScript,PHP,MYSQL">
+    <meta name="keywords" content="justice foundation">
+    <meta name="author" content="Justice Chimobi">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dented</title>
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/styles/header.css">
     <link rel="stylesheet" href="./assets/styles/herosection.css">    
@@ -11,7 +14,9 @@
     <link rel="stylesheet" href="./assets/styles/trending_job.css"> 
     <link rel="stylesheet" href="./assets/styles/about-section.css">
     <link rel="stylesheet" href="./assets/styles/subcription.css"> 
+    <link rel="stylesheet" href="./assets/styles/contact.css"> 
     <link rel="stylesheet" href="./assets/styles/footer.css">    
+    <title>Dented</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white" id="navbar">

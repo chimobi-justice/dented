@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <h6><?php echo htmlspecialchars($category['category']); ?></h6>
-                                <p  class="text-dark">job vacancy</p>
+                                <p  class="text-dark">job vacancies</p>
                                 <a href="lib/category_job.php?categoryjobs=<?php echo htmlspecialchars($category['category']); ?>" class="btn btn-sm category-btn">View More</a>
                             </div>
                         </div>

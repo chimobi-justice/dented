@@ -17,7 +17,12 @@
 #getStartedBtn:active {
     transform: scale(0.8);
 }
-
+.hero-img-holder {
+    width: 100%;
+}
+.hero-img-holder > img {
+    width: 100%;
+}
 @media screen and (max-width: 440px) {
     #hero-section > .hero-wrapper > div > div > div > img {
         width: 100%;
