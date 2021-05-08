@@ -8,7 +8,7 @@
       <div>
           <h4>Employers</h4>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="auth/login.php">Sign in</a></li>
             <li><a href="auth/signup.php">Register</a></li>
           </ul>
